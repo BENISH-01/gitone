@@ -1,0 +1,15 @@
+.heading{
+    color: red;
+    text-align: center;
+    border: 2px solid black;
+}
+.headingtwo{
+    color: green;
+    text-decoration: underline;
+    border: 2px dotted;
+}
+.para{
+    color:aqua;
+    font-size: 30px;
+    
+}

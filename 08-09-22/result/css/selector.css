@@ -1,0 +1,28 @@
+.parent .parent-1 .p1-child-1 .child-1-head{
+    color: aqua;
+    text-align: center;
+}
+.child-1-para{
+    color: red;
+    border: 1px solid block;
+}
+.pic{
+    margin-left: 300px;
+}
+h1{
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    
+    
+}
+div{
+    border: 2px solid red;
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+    padding:50px
+}
