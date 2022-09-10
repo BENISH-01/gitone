@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    height: 600px;
+    width: 600px;
+    border: 5px solid black;
+    position: relative;
+}
+.subone{
+    height: 150px;
+    width: 150px;
+    border: 1px solid black;
+    background-color: darkorange;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+.subtwo{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: darkviolet;
+    top: 0px;
+    right: 0px;
+}
+.subthree{
+    height: 150px;
+    width: 150px;
+    background-color: green;
+    position: absolute;
+    top: 225px;
+    left: 225px;
+}
+
+.subfour{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: blue;
+    bottom: 0px;
+    left: 0px;
+}
+
+.subfive{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    border: 1px solid black;
+    background-color: royalblue;
+    bottom: 0px;
+    right: 0px;
+}
