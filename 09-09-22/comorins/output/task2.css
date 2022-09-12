@@ -1,14 +1,17 @@
+/* body */
 body{
     margin: 0px;
     padding: 0px;
     
 }
+/* main div */
 .main{
     height: 800px;
     width: 1200px;
     
     
 }
+/* child divs */
 .main div{
     display: inline-block;
     height: 800px;
