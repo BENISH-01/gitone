@@ -1,0 +1,80 @@
+/* head */
+.main{
+    height:40px;
+    background-color: black;
+    text-align: center;
+    }
+    .sub li{
+        display: inline-block;
+        padding: 10px;
+    }
+    a{
+       color: white; 
+       text-decoration: none;
+    }
+    p{
+        color: grey;
+    }
+    /* form */
+    .name1{
+        border: 1px solid #ced4da;
+        border-bottom: 3px solid yellow;
+        width:400px;
+        height: 35px;
+        }
+    .tarea{
+        width: 400px;
+        height: 50px;
+        border: 1px solid #ced4da;
+        border-bottom: 3px solid yellow;
+        }
+    
+    .form1 label{
+        width: 100px;
+        display: inline-block;
+    }
+    .form1{
+        margin: 0 auto;
+        width: 70%;
+    }
+    .button{
+        width: 100px;
+        background-color: yellow;
+        color: white;
+        padding: 5px;
+        margin-left: 400px;
+        border: 1px solid #ced4da;
+        
+    }
+    .color1{
+        width: 400px;
+        border: 1px solid #ced4da;
+        border-bottom: 3px solid yellow;
+        height: 15px;
+    }
+    
+/* iframe */
+    iframe{
+        margin-top: 40px;
+        width: 700px;
+        height: 600px;
+    }
+
+    /* diplay  */
+    .box1{
+        display: inline-block;
+        background-color: yellow;
+        width: 400px;
+        height: 100px;
+        margin-top: 20px
+
+    }
+    .box2{
+        display: inline-block;
+        background-color: yellow;
+        margin-left: 20px;
+        width: 400px;
+        height: 100px;
+        margin-top: 20px;
+    }
+    .lab{color: red;}
