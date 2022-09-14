@@ -2,12 +2,14 @@
     margin: 0px;
     padding: 0px;
 }
+/* header */
 h1{
     padding: 50px;
     text-align: center;
     background-color: black;
     color: white;
 }
+/* navigation */
 nav{
     padding: 20px;
     text-align: center;
@@ -16,15 +18,42 @@ nav{
     color: white;
     border-bottom: 5px solid white;
 }
+/* section */
 section{
-    padding: 100px;
+    
     text-align: center;
     background-color: grey;
     color: white;
+    overflow: hidden;
 
 }
-footer{
+/* slide */
+ section h2{
     padding: 50px;
+    background-color:black;
+    margin: 10px;
+}
+/* chil div */
+.coloumn{
+    display: inline-block;
+    width:31%;
+    height: 200px;
+    margin-left: 20px;
+    background-color: white;
+}
+.grid .coloumn:first-child{
+    margin-left: 0px;
+
+}
+.grid .coloumn:last-child{
+    margin-right:0px;
+}
+.grid{
+    margin: 10px;
+}
+/* footer */
+footer{
+    padding: 30px;
     text-align: center;
     background-color: black;
     color: white;

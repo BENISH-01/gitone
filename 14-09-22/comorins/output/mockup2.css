@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* header */
+h1{
+    padding: 50px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+/* navigation */
+nav{
+    padding: 10px;
+    text-align: center;
+    background-color: darkgrey;
+    border-top: 5px solid white;
+    color: white;
+    border-bottom: 5px solid white;
+}
+section{
+    width: 70%;
+    margin: 0 auto;
+}
+.box1{
+    background-color: gray;
+    color:black;
+    display: inline-block;
+    text-align: center;
+    width: 70%;
+    padding: 200 0;
+    
+
+
+}
+.box2{
+    background-color:darkgray;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    width:25%;
+    padding: 200 0;
+    
+}
+
+footer{
+    padding: 30px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-top: 5px solid white;
+    
+
+}
