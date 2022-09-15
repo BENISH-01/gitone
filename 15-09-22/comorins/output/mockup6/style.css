@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+nav ul{
+    display: inline-block;
+    background-color: black;
+    text-align: center;
+    padding: 48px 0px;
+    width: 100%;
+
+}
+nav li{ 
+    display: inline-block;
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    margin-left: 54px;
+}
+ul li:first-child {
+    margin-left: 0px;
+}
+.img1{
+    width: 150px;
+    height: 150px;
+    padding: 100px;
+}
+
