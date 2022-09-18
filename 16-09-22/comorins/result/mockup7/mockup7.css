@@ -367,3 +367,203 @@ section{
         padding: 13px 33px;
         margin-left: 15px;
     }
+/* footer */
+    .footer1{
+        background-color:#494D56; ;
+        width: 100%;
+        height: 349px;
+        
+    }
+    .footer1 .footerlogo img{
+        width: 192px;
+        height: 92px;
+        margin-top: 103px;
+        margin-left: 79px;
+        margin-right: 192px;
+    }
+    .footerlogo{
+        display: inline-block;
+        height:92px ;
+        width: 271px;
+        
+    }
+    .footer1 .products p{
+        height: 24px;
+        display: inline-block;
+        
+        
+    }
+    .footer1 .products{
+        margin-left: 140px;
+        width: 365px;
+        height: 250px;
+        margin-top: 91px;
+        vertical-align: top;
+        display: inline-block;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+.products .p1{
+    width: 61px;
+    margin-right: 100px
+}
+.products .p2{
+    width: 57px;
+    margin-right: 85px;
+}
+.products .p3{
+    width: 40px;
+}
+.products .p4{
+        width: 71px;
+        margin-right: 90px;
+        margin-top: 14px;
+}
+.products .p5{
+    width: 50px;
+    
+}
+.products .p6{
+    margin-left: 88px;
+    margin-top: 30px;
+    width: 52px;
+    
+}
+.products .p7{
+    margin-top: 49px;
+    padding: 2px 14px 8.5px 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    background: #EC483C;
+    border-radius: 10px;
+}
+.media{
+    display: inline-block;
+    vertical-align: top;
+    height: 341px;
+    width: 41%;
+}
+.media .box{
+    width: 233px;
+    height: 41px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    background: #494D56;
+    margin-top: 11px;
+    margin-left: 160px;
+    padding-left: 10px;
+} 
+.media .press{
+    width: 122px;
+    height: 41px;
+    margin-left: -10px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    background: #EC483C;
+    border-radius: 0px 5px 5px 0px;
+    
+    }
+    .media .para3{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+        margin-top: 99px;
+        margin-left: 160px;
+        width: 263px;
+        height: 24px;
+
+    }
+    .media .para4{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        width: 259px;
+        height: 24px;
+        margin-left: 160px;
+        color: #FFFFFF;
+        margin-top: 33px;
+    }
+    .media .face{
+        width: 20px;
+        height: 20px;
+        padding: 8px 10px;
+        background: #5D626F;
+        border-radius: 5px;
+        margin-right: 14px;
+    }
+   .media .linked{
+        width: 20px;
+        height: 20px;
+        background: #5D626F;
+        border-radius: 5px;
+        padding: 8px 10px;
+        margin-left: 160px;
+        margin-right: 14px;
+    }
+    .media .twit{
+        width: 20px;
+        height: 20px;
+        background: #5D626F;
+        border-radius: 5px;
+        padding: 8px 10px;
+        margin-right: 14px;
+    }
+    .media .insta{
+        width: 20px;
+        height: 20px;
+        background: #5D626F;
+        border-radius: 5px;
+        padding: 8px 10px;
+    }
+    /* footer2 */
+    .footer2{
+        display: table;
+        width: 100%;
+        height: 53px;
+        background: #3A3E47;
+        vertical-align: middle;
+    }
+    .footer2 .point1{
+        display: table-cell;
+        vertical-align: middle;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFFFF;
+        margin-left: 83px;
+        width: 940px;
+        height: 24px;
+    }
+    .footer2 .point1 p{
+        
+        width: 121px;
+        margin-left: 83px;
+    }
+    .footer2 .point2{
+        display: table-cell;
+        vertical-align: middle
+        
+    }
+    .footer2 .point2 p{
+        display: inline-block;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+    
+    
+    .footer2 .point2 .par2{
+        margin-left: 40px;
+    } 
