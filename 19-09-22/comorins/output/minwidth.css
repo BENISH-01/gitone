@@ -1,0 +1,18 @@
+.parent{
+    background-color: pink;
+}
+@media(min-width:575px){
+    .parent{
+        background-color: red;
+    }
+}
+@media(min-width:767px){
+    .parent{
+        background-color: yellow;
+    }
+}
+@media(min-width:991px){
+    .parent{
+        background-color:aqua;
+    }
+}

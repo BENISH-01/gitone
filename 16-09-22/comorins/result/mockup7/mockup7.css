@@ -434,7 +434,7 @@ section{
 }
 .products .p7{
     margin-top: 49px;
-    padding: 2px 14px 8.5px 15px;
+    padding: 8px 14px 8.5px 15px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -551,7 +551,7 @@ section{
     }
     .footer2 .point2{
         display: table-cell;
-        vertical-align: middle
+        vertical-align: middle;
         
     }
     .footer2 .point2 p{
