@@ -1,0 +1,29 @@
+.head{
+    background-color: white;
+}
+body{
+    background-color: gray;
+}
+.head h1{
+    margin: 0%;
+}
+.head p{
+    margin: 0%;
+}
+.main1{
+    display: inline-block;
+}
+.main2{
+    display: inline-block;
+    vertical-align: top;
+}
+.img{
+    background-color: gray;
+    padding: 0px 80px 80px 0px;
+}
+.main2 .img{
+    padding: 0px 80px 40px 0px;
+}
+footer{
+    background-color: lightgray;
+}

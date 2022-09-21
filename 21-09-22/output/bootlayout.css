@@ -1,0 +1,27 @@
+
+.head h1{
+    background-color: black;
+    color: white;
+    padding: 30px 0px;
+}
+.head nav{
+    padding: 20px 0px;
+    background-color: darkgray;
+    color: white;
+    padding-left: 100px;
+}
+.bodysec .main{
+   background-color: lightgray;
+   padding: 150px 0px;
+   color: white;
+}
+.bodysec .side{
+    background-color: gray;
+    padding: 150px 0px;
+    color: white;
+}
+footer{
+    background-color: gray;
+    color: white;
+    padding: 30px 0px;
+}
