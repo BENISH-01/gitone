@@ -1,0 +1,35 @@
+.logo{
+    width: 218px;
+}
+.logo1{
+ width: 369px;
+ height: 278px;
+ border: 1px solid #6F6C6C;
+ padding: 10px;
+}
+.bor{
+    border: none;
+    background: #F3F2EE;
+}
+.section1{
+    background-color: #F3F2EE;;
+}
+.bgcolor{
+    background-color:#F3F2EE;;
+}
+.photo{
+    float: left;
+}
+.photo1{
+    border: 1px solid #000000;
+}
+.img2{
+    margin-bottom: 130px;
+    margin-top: 97px;
+}
+.img2 img{
+    width: 183px;
+    height: 152px;
+    margin: 0px 30px
+}
+
