@@ -1,11 +1,398 @@
+*{
+    font-family: 'Roboto';
+    font-style: normal;
+}
+/* 565px */
+
+@media(min-width:565px){
+
+    .font1 li a{
+    
+        font-weight: 500;
+        font-size: 18px;
+        
+    }
+    .navone p{
+        
+        font-weight: 400;
+        font-size: 20px;
+        color: #000000;
+    
+    }
+    .rowfont h2{
+        font-weight: 400;
+         font-size: 30px;
+    }
+    .rowfont{
+        font-weight: 300;
+        font-size: 20px;
+    }
+    
+    
+    .logo{
+        width: 218px;
+    }
+    .logo1{
+     width: 100%;
+     height: 278px;
+     border: 1px solid #6F6C6C;
+     padding: 10px;
+    }
+    .section2 h2{
+        font-weight: 400;
+        font-size: 38px;
+    }
+    .section2 p{
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .footfont h2{
+        font-weight: 400;
+        font-size: 38px;
+    
+    }
+    .footfont p{
+        font-weight: 200;
+         font-size: 14px;
+    }
+    .footfont h6{
+        font-weight: 400;
+    font-size: 20px;
+    }
+    .bor{
+        border: none;
+        background: #F3F2EE;
+    }
+    .section1{
+        background-color: #F3F2EE;;
+    }
+    .bgcolor{
+        background-color:#F3F2EE;;
+    }
+    .photo{
+        float: left;
+        
+    }
+    .photo1{
+        border: 1px solid #000000;
+    }
+    .img2{
+        margin-bottom: 100px;
+        margin-top: 80px;
+    }
+    .img2 img{
+        width: 183px;
+        height: 152px;
+        margin: 0px 30px
+    }
+    .photo .photo2{
+        width: 164px;
+        height: 135px;
+        border: 1px solid #7B7979;
+    }
+    hr{
+        border: 1px solid #949393;
+        
+    }
+    .secondsection{
+        margin-top: 64px;
+    }
+    
+    .para3{
+        margin-bottom: 18px;
+    }
+    .photofoot  .photo3{
+        border: 1px solid #C2C2C2;
+        float: left;
+        
+        
+    }
+    .photofoot2 img{
+        width: 30%;
+    
+    }
+    
+    
+    }
+
+
+
+
+/* 767px */
+
+@media(min-width:767px){
+
+    .font1 li a{
+        font-size: 27px;
+    }
+    
+    .logo{
+        width: 218px;
+    }
+    .logo1{
+     width: 90%;
+     height: 90%;
+     
+     border: 1px solid #6F6C6C;
+     padding: 10px;
+    }
+    .section2 h2{
+        font-weight: 400;
+        font-size: 35px;
+    }
+    .section2 p{
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .footfont h2{
+        font-weight: 400;
+        font-size: 35px;
+    
+    }
+    .footfont p{
+        font-weight: 200;
+         font-size: 20px;
+    }
+    .footfont h6{
+        font-weight: 400;
+    font-size: 15px;
+    }
+    .secondsection h2{
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .secondsection h4{
+        font-size: 20px;
+    }
+    .secondsection p{
+        font-size: 20px;
+    }
+    .bor{
+        border: none;
+        background: #F3F2EE;
+    }
+    .section1{
+        background-color: #F3F2EE;;
+    }
+    .bgcolor{
+        background-color:#F3F2EE;;
+    }
+    .photo{
+        float: left;
+        
+    }
+    .photo1{
+        border: 1px solid #000000;
+    }
+    .img2{
+        margin-bottom: 100px;
+        margin-top: 80px;
+    }
+    .img2 img{
+        width: 183px;
+        height: 152px;
+        margin: 0px 10px
+    }
+    .photo .photo2{
+        width: 164px;
+        height: 135px;
+        border: 1px solid #7B7979;
+    }
+    hr{
+        border: 1px solid #949393;
+        
+    }
+    .secondsection{
+        margin-top: 64px;
+    }
+    
+    .para3{
+        margin-bottom: 18px;
+    }
+    .photofoot  .photo3{
+        border: 1px solid #C2C2C2;
+        
+        width: 100%;
+        height: 100%;
+        
+    }
+    .photofoot {
+        height: 100%;
+    }
+    
+    }
+
+
+
+
+
+
+
+
+
+/* 991px */
+
+
+@media(min-width:991px){
+
+    .font1 li a{
+        font-size: 23px;
+    }
+    
+    .logo{
+        width: 218px;
+    }
+    .logo1{
+     width: 90%;
+     height: 90%;
+     
+     border: 1px solid #6F6C6C;
+     padding: 10px;
+    }
+    .section2 h2{
+        font-weight: 400;
+        font-size: 40px;
+    }
+    .section2 p{
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .footfont h2{
+        font-weight: 400;
+        font-size: 40px;
+    
+    }
+    .footfont p{
+        font-weight: 200;
+         font-size: 16px;
+    }
+    .footfont h6{
+        font-weight: 400;
+    font-size: 20px;
+    }
+    .secondsection h2{
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .secondsection h4{
+        font-size: 18px;
+    }
+    .secondsection p{
+        font-size: 16px;
+    }
+    .bor{
+        border: none;
+        background: #F3F2EE;
+    }
+    .section1{
+        background-color: #F3F2EE;;
+    }
+    .bgcolor{
+        background-color:#F3F2EE;;
+    }
+    .photo{
+        float: left;
+        
+    }
+    .photo1{
+        border: 1px solid #000000;
+    }
+    .img2{
+        margin-bottom: 100px;
+        margin-top: 80px;
+    }
+    .img2 img{
+        width: 183px;
+        height: 152px;
+        margin: 0px 10px
+    }
+    .photo .photo2{
+        width: 164px;
+        height: 135px;
+        border: 1px solid #7B7979;
+    }
+    hr{
+        border: 1px solid #949393;
+        
+    }
+    .secondsection{
+        margin-top: 64px;
+    }
+    
+    .para3{
+        margin-bottom: 18px;
+    }
+    .photofoot  .photo3{
+        border: 1px solid #C2C2C2;
+        float: left;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .photofoot {
+        height: 100%;
+    }
+    
+    }
+
+
+
+
+
+@media(min-width:1200px){
+
+.font1 li a{
+
+    font-weight: 500;
+    font-size: 27px;
+    
+}
+.navone p{
+    
+    font-weight: 400;
+    font-size: 26px;
+    color: #000000;
+
+}
+.rowfont h2{
+    font-weight: 400;
+     font-size: 38px;
+}
+.rowfont{
+    font-weight: 300;
+    font-size: 23px;
+}
+
+
 .logo{
     width: 218px;
 }
 .logo1{
- width: 369px;
+ width: 100%;
  height: 278px;
  border: 1px solid #6F6C6C;
  padding: 10px;
+}
+.section2 h2{
+    font-weight: 400;
+    font-size: 43px;
+}
+.section2 p{
+    font-weight: 400;
+    font-size: 18px;
+}
+.footfont h2{
+    font-weight: 400;
+    font-size: 43px;
+
+}
+.footfont p{
+    font-weight: 200;
+     font-size: 18px;
+}
+.footfont h6{
+    font-weight: 400;
+font-size: 24px;
 }
 .bor{
     border: none;
@@ -19,17 +406,48 @@
 }
 .photo{
     float: left;
+    
 }
 .photo1{
     border: 1px solid #000000;
 }
 .img2{
-    margin-bottom: 130px;
-    margin-top: 97px;
+    margin-bottom: 100px;
+    margin-top: 80px;
 }
 .img2 img{
     width: 183px;
     height: 152px;
     margin: 0px 30px
+}
+.photo .photo2{
+    width: 164px;
+    height: 135px;
+    border: 1px solid #7B7979;
+}
+hr{
+    border: 1px solid #949393;
+    
+}
+.secondsection{
+    margin-top: 64px;
+}
+
+.para3{
+    margin-bottom: 18px;
+}
+.photofoot  .photo3{
+    border: 1px solid #C2C2C2;
+    float: left;
+    height: 250px;
+    
+    
+}
+.photofoot2 img{
+    width: 30%;
+
+}
+
+
 }
 
