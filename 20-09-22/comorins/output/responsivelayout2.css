@@ -21,6 +21,7 @@ header{
     height: 127px;
     position: sticky;
     top: 0;
+    z-index: 1;
     
 }
 
@@ -502,6 +503,7 @@ header{
     height: 127px;
     position: sticky;
     top: 0;
+    z-index: 1;
     
 }
 
@@ -998,6 +1000,7 @@ header{
     height: 127px;
     position: sticky;
     top: 0;
+    z-index: 1;
     
 }
 
@@ -1494,6 +1497,7 @@ header{
     height: 127px;
     position: sticky;
     top: 0;
+    z-index: 1;
     
 }
 
