@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+}
+/* nav section */
+.head{
+    margin: 0;
+    padding: 0;
+}
+.navimg .logo{
+    width: 156px;
+    height: 96px;
+    margin-left: 99px;
+}
+.centerli li a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #1E1F4B;
+}
+.endli li a{
+    font-family: 'Poppins'; 
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    width: 181px;
+    text-align: center;
+    padding: 10px 40px;
+    background: #706FE5;
+    border-radius: 12px;
+    margin-right: 80px;
+
+}
+/* header-bottom start */
+.header-bottom{
+    width: 85%;
+    margin: 0 auto;
+
+}
+.header-bottom img{
+    width: 100%;
+    height: 711px;
+    border-radius: 20px;
+}
+/* section-1 start */
+.section-1{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 130px;
+}
+.section-1 .bor{
+    border: none;
+}
+.section-1 .img-4{
+    width: 85%;
+    height: 188px;
+    border-radius: 20px;
+}
+.section-1 .fullrow h5{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #2E3E5C;
+    width: 92%;
+}
+.section-1 .fullrow hp{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #2E3E5C;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+}
+/* section 2 start */
+.section-2{
+    width: 53%;
+    margin: 0 auto;
+    margin-top: 130px
+}
+.section-2 h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: capitalize;
+    width: 56%;
+    margin-left: 140px;
+    
+    
+    color: #03014C;
+}
+.section-2 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    
+
+    color: #03014C;
+
+    opacity: 0.5;
+    width: 100%;
+    height: 171px;
+
+    margin-top: 75px;
+}
+.section-2 .coma-1{
+    float: left;
+    margin-left: -60px;
+}
+.section-2 .coma-2{
+    float: right;
+    margin-right: -60px;
+    
+}
+.section-2 .margin{
+    margin-top: 72px;
+}
