@@ -101,7 +101,7 @@ body{
     
     color: #03014C;
 }
-.section-2 p{
+.section-2 .para1{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -128,4 +128,22 @@ body{
 }
 .section-2 .margin{
     margin-top: 72px;
+}
+.section-2 h3{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+color: #1E1F4B;
+margin-top: 18px;
+}
+.section-2 .para2{
+    font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+color: #2E3E5C;
+
+opacity: 0.8;
 }
