@@ -262,10 +262,27 @@ border-radius: 110px;
     margin: 0 auto;
 }
 .phone img{
-    float: left;
-    
-    
+    float: left
 }
+.section-4 h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 72px;
+    color: #04162F;
+
+}
+.section-4 p{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 33px;
+color: #656565;
+width: 70%;
+}
+
 
 
 
