@@ -9,6 +9,7 @@
 <body>
    <input id="todo" type="text"/>
    <button onclick="add()">add</button>
+   <ul id="do"></ul>
    <script>
     let list=[];
 
@@ -16,7 +17,20 @@
         let to_do=document.getElementById("todo").value
         list.push(to_do);
         console.log(list)
+        display(list)
     }
+    function display(list_arr){
+        ele="";
+        for(let i=0; i<list_arr.length; i++){
+        ele=ele+"<li>"+list_arr[i]+"</li>"
+        }
+        document.getElementById("do").innerHTML=ele
+
+
+    }
+    
+
+
    </script>
 
     
