@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let resume={
+            name:"T.Benish",
+            age:21,
+            education:[{
+                qualification:"H.S.C",
+                institute:"st.joseph higher sec.school",
+                percentage:89,
+                year_of_passing:2017
+            },
+            {
+                qualification:"B.E",
+                institute:"S.X.C.C.E",
+                department:"mechanical",
+                percentage:81,
+                year_of_passing:2021
+            }],
+
+            personaldetails:[{
+                email:"tbenish15@gmail.com",
+                phone:8056425001,
+                Gender:"male",
+                D_O_B:"18/02/2000",
+                language:["tamil","english"],
+                family_details:{
+                    father_name:"Thaddeus pelson",
+                    mother_name:"Vijila",
+                    address:"palliyadi",
+                }
+
+                
+                
+            }],
+            skills:["HTML","CSS","JavaScript","python"],
+            hobbies:["playing cricket","reading books","listening music"],
+            area_of_intrest:["programming","designing"],
+            certification:["python","robotics"]
+            
+
+        };
+    
+        
+        for(let i=0; i<resume.education.length; i++){
+            console.log(resume.education[i].institute);
+        }
+
+        
+        let result=0;
+        let total=0;
+        let ans=0;
+        for(i=0; i<resume.education.length; i++){
+            ans=(resume.education[i].percentage);
+            total=total+ans;
+            
+            }
+            console.log(total);
+            result=total/resume.education.length;
+            console.log(result)
+
+
+        
+
+
+    </script>
+</body>
+</html>
