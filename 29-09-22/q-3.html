@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function assignGrade(a){
+            if(a>=90 && a<=100){
+                console.log("grade score for",a,"is=A")
+            }
+            else if(a>=70 && a<=89){
+                console.log("grade score for",a,"is=B")
+            }
+            else if(a>=50 && a<=69){
+                console.log("grade score for",a,"is=C")
+            }
+            else if(a>=30 && a<=49){
+                console.log("grade score for",a,"is=D")
+            }
+            else if(a>=0 && a<=29){
+                console.log("grade score for",a,"is=E")
+            }
+            else{
+                console.log("invalid score")
+            }
+        }
+        assignGrade(105)
+        assignGrade(70)
+        assignGrade(50)
+        assignGrade(40)
+    </script>
+    
+</body>
+</html>
