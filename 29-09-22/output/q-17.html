@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkLeapYear(a){
+            if(a%4==0 && a%100!=0){
+                console.log(a+ " is a leap year")
+            }
+            else if(a%400==0){
+                console.log(a+ " is a leap year")
+            }
+            else{
+                console.log(a+ " is not a leap year")
+            }
+
+        }
+        checkLeapYear(2016)
+        checkLeapYear(2008)
+        checkLeapYear(1990)
+        checkLeapYear(2022)
+        checkLeapYear(2000)
+    </script>
+    
+</body>
+</html>

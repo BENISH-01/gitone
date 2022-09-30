@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findDaysinMonth(month,year){
+            if(month<1 || month>12){
+                console.log("invalid month")
+            }
+            else if(month==2){
+                if(year%4==0){
+                    console.log("29 days")
+                }
+                else{
+                    console.log("28 days")
+                }
+            }
+            else if( month==4 || month==6 ||month==9 ||month==11){
+                console.log("30 days")
+            }
+            else{
+                console.log("31 days")
+            }
+        }
+        findDaysinMonth(02,2000)
+        findDaysinMonth(40,2000)
+        findDaysinMonth(0,2000)
+        findDaysinMonth(9,2022)
+
+    </script>
+    
+    
+</body>
+</html>
