@@ -4,24 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>product of two array</title>
 </head>
 <body>
     <script>
-        let count=0;
-        function digitCount(a){
-            while(a>0){
-            c=a/10
-            a=c
-            count++;
+        let array=[]
+        function findProd(a,b){
+            for(let i=0; i<a.length;i++ ){
+                k=a[i]*b[i]
+                array.push(k)
+            }
+            console.log(array)
         }
-            
-
-        }
-        console.log(count)
-        
-        digitCount(100)
+        findProd([2,3],[3,4])
     </script>
+
     
 </body>
 </html>

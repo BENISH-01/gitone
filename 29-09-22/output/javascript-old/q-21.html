@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binary search algorithm</title>
+</head>
+<body>
+    <script>
+        function binarysearch(array,target){
+          let  left=0;
+          let mid=0;
+          let  right=array.length-1;
+
+          while(left<=right){
+            let mid=Math.floor((left+right)/2);
+              
+               if(target==array[mid]){
+                return mid;
+               }
+               else if(target<array[mid]){
+                right=mid-1;
+                
+               }
+               else{
+                left=mid+1;
+               }
+          }
+          return false;
+
+        }
+        let array=[1,2,3,4,5,6,7,8,9]
+       console.log(binarysearch(array,4))
+       console.log(binarysearch(array,5))
+       console.log(binarysearch(array,9))
+       
+    </script>
+    
+</body>
+</html>

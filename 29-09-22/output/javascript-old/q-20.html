@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repeated words</title>
+</head>
+<body>
+    <script>
+        function findDup(a){
+            console.log("duplicate values are :")
+            for(let i=0; i<a.length; i++){
+                for( let j=i+1; j<a.length;j++){
+                    if(a[i]===a[j]){
+                        console.log(a[i])
+                        
+                    }
+                }
+            }
+        }
+        let a=["hello",1,6,7,3,1,"hello",6,3]
+        findDup(a)
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sum of digits</title>
+</head>
+<body>
+    <script>
+        function digitSum(a){
+            let b=0;
+            while(a>=1){
+                
+               let  c=a%10;
+                b=b+c;
+                a=Math.floor(a/10);
+            }
+            console.log("sum of  the given digit is "+ b)
+        }
+        digitSum(10)
+        digitSum(1)
+        digitSum(222)
+        digitSum(12345)
+        digitSum(13)
+
+    </script>
+    
+</body>
+</html>
