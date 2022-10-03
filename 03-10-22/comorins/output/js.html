@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product of two array</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
-        
-        function findProd(a,b){
-             let k=0
-            for(let i=0; i<a.length;i++ ){
-                k=(a[i]*b[i])+k
-                
-            }
-            console.log(k)
-        }
-        findProd([2,3],[3,4])
-    </script>
+        localStorage.setItem("name","beni")
 
+        function test(){
+           sessionStorage.setItem("name","benish")
+           
+
+        }
+        
+    </script>
+    <button onclick="test()">check</button> 
     
 </body>
 </html>
