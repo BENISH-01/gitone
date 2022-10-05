@@ -27,11 +27,19 @@
             let ele=''
             let local_list=JSON.parse(localStorage.getItem("todo"))
             for(i=0; i<local_list.length;i++){
-                ele=ele+"<li>"+local_list[i]+"</li>"
+                ele=ele+"<li>"+local_list[i]+"<button onclick='removeItem()' id='del'>Delete</button>"+"</li>"
             }
             document.getElementById("do").innerHTML=ele
         }
         display()
+        function removeItem(){
+            let new_list=JSON.parse(localStorage.getItem("todo"))
+            for(let i=del[i]; i<new_list.length;i++){
+                remove(i)
+            }
+
+
+        }
     </script>
 
     
