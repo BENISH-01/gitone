@@ -67,7 +67,7 @@ let Resume={
     
 }
 let resume1={
-    skills:[],
+    
     
 }
 
@@ -75,7 +75,7 @@ function add(key,value,index=null,indexKey=null){
     if(index==null){
         resume1[key]=value;
     }
-    else if(key=="education"){
+    else if(key=="education" || key=="certification" || key=="experience"){
         if(!resume1[key]){
             resume1[key]=[];
         }
@@ -99,28 +99,15 @@ function add(key,value,index=null,indexKey=null){
         }
         resume1[key][indexKey]=value;
     }
-    else if(key=="certification"){
-        if(!resume1[key]){
-            resume1[key]=[];
-        }
-        if(!resume1[key][index]){
-            resume1[key][index]={}
+  
 
-        }
-        
-        resume1[key][index][indexKey]=value
-    }
-    else if(key=="experience"){
+    else if(key=="intrest" || key=="hobbies" || key=="skills"){
         if(!resume1[key]){
-            resume1[key]=[];
+            resume1[key]=[]
         }
-        if(!resume1[key][index]){
-            resume1[key][index]={}
-
-        }
-        
-        resume1[key][index][indexKey]=value
+        resume1[key][index]=value
     }
+
     
 
     else{
