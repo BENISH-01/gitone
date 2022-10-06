@@ -8,7 +8,7 @@
 </head>
 <body>
     <input id="input"/>
-    <button onclick="add()" id="add">check</button>
+    <button onclick="add()" id="add">Add</button>
     <ul id="do"></ul>
     <script>
         if(!localStorage.getItem("todo")){
@@ -27,19 +27,26 @@
             let ele=''
             let local_list=JSON.parse(localStorage.getItem("todo"))
             for(i=0; i<local_list.length;i++){
-                ele=ele+"<li>"+local_list[i]+"<button onclick='removeItem()' id='del'>Delete</button>"+"</li>"
+                ele=ele+"<li>"+local_list[i]+"<button onclick='removeItem("+i+")' id='del'>Delete</button>"+"</li>"
             }
             document.getElementById("do").innerHTML=ele
         }
         display()
-        function removeItem(){
-            let new_list=JSON.parse(localStorage.getItem("todo"))
-            for(let i=del[i]; i<new_list.length;i++){
-                remove(i)
-            }
+        function removeItem(i){
+            let new_list=JSON.parse(localStorage.getItem("todo"));
+            console.log(new_list)
+            new_list.splice(i,1)
 
-
+            
+            
+            localStorage.setItem("todo",JSON.stringify(new_list))
+            display(new_list)
+            
+            
         }
+
+
+        
     </script>
 
     
