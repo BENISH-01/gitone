@@ -67,7 +67,7 @@
 
  <!-- intrsest -->
  <label>INTEREST:</label><input type="text" onkeyup="add('intrest',this.value,0)"/>
-                         <input type="text" onkeyup="add('intrest',this.value,1)"/>
+                         <input type="text" onkeyup="add('intrest',this.value,1)"/><br><br>
 
  <!--certification  -->
  <label>CERTIFICATION:</label><br><br>
@@ -100,6 +100,33 @@
         </tr>
     </tbody>
  </table><br><br>
+ <!-- project -->
+ <label>PROJECTS:</label>
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Abstract</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><input type="text" onkeyup="add('project',this.value,0,'project_title')"/></td>
+      <td><input type="text" onkeyup="add('project',this.value,0,'abstract')"/></td>
+     
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><input type="text" onkeyup="add('project',this.value,1,'project_title')"/></td>
+      <td> <input type="text" onkeyup="add('project',this.value,1,'abstract')"/></td>
+      
+    </tr>
+   
+  </tbody>
+</table><br><br>
 
  <!-- experience -->
  <Label>EXPERIENCE:</Label><br><br>
@@ -139,7 +166,9 @@
 
    
   <div id="code"></div>
-    
+  <button id="submit" onclick="sub()">SUBMIT</button><br><br>
+    <button id="list" onclick="resume_list()">resume lists</button>
+    <ul id="new_resume"></ul>
 
 
 

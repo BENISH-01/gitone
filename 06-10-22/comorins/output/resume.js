@@ -75,7 +75,7 @@ function add(key,value,index=null,indexKey=null){
     if(index==null){
         resume1[key]=value;
     }
-    else if(key=="education" || key=="certification" || key=="experience"){
+    else if(key=="education" || key=="certification" || key=="experience" ||key=="project"){
         if(!resume1[key]){
             resume1[key]=[];
         }
@@ -90,8 +90,8 @@ function add(key,value,index=null,indexKey=null){
         if(!resume1[key]){
             resume1[key]={}
             if(indexKey=='lang'){
-                resume1[index]=[]
-                resume1[index][indexKey]=value
+                resume1[indexKey]=[]
+                resume1[key][index][indexKey]=value
                
                 
             }
@@ -120,4 +120,25 @@ function add(key,value,index=null,indexKey=null){
 }
  function display(){
     document.getElementById("code").innerHTML=JSON.stringify(resume1)
+}
+function sub(){
+
+    if(!localStorage.getItem("resume")){
+        localStorage.setItem("resume",JSON.stringify([]))
+    }
+    let b=JSON.parse(localStorage.getItem("resume"))
+    b.push(resume1)
+    localStorage.setItem("resume",JSON.stringify(b))
+
+
+}
+function resume_list(){
+    let my_resume=JSON.parse(localStorage.getItem("resume"))
+    
+    let ele=' '
+    for(let i=0; i<my_resume.length;i++){
+        
+        ele=ele+"<li><a href='view.html?name="+my_resume[i].name+"'>"+my_resume[i].name+"</a></li>"
+     }
+     document.getElementById("new_resume").innerHTML=ele
 }
