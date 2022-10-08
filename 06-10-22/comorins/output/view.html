@@ -5,23 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="view.css" rel="stylesheet"/>
 </head>
-<body>
-<div class="container">
-    <h1>RESUME</h1>
-    <p>NAME:<span></span></p>
-    <p>E-mail:<span></span></p>
-    <p>Phone:<span></span></p>
-    <p>Role:<span></span></p>
-    <p>Objective:<span></span></p>
+<body onload="generatecv()">
+<div class="container head ">
+  
+    <div class="row row_1 bg-dark text-white ">
+      <div class="col-6 my mt-5">
+        <p><label class="lab">NAME</label><span class="headlab" id="nameT"></span></p>
+        <p><label class="lab">E-mail</label><span  class="headlab" id="emailT"></span></p>
+        <p><label class="lab">Phone</label><span class="headlab"  id="phoneT"></span></p>
+        <p><label class="lab">Role</label><span class="headlab" id="roleT"></span></p>
+        
+       </div>
+      <div class="col-6 "style="width:100% ">
+        
+          <div class="card bg-dark mt-5">
+              
+              <div class="card-body">
+                <h5 class="card-title"><p><label class="lab">Objective</label></p></h5>
+                <p class="card-text"><p class="ml-3 obj" id="objT"></p>
+              </div>
+          </div>
+          
+        
+      </div>
+    </div>
+   
+     
 
-    <h2>Skills:<span></span></h2>
-    <p><span>skill1</span></p>
-    <p><span>skill2</span></p>
 
-    <h2>Education:<span></span></h2>
-    <table class="table border text-center">
+    <!-- education -->
+    <h2 class="mt-4 bg-primary text-white text-center">Education</h2>
+    <table class="table border text-center tablefont">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -34,69 +51,173 @@
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="course0"></td>
+            <td id="year0"></td>
+            <td id="institute0"></td>
+            <td id="percentage0"></td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="course1"></td>
+            <td id="year1"></td>
+            <td id="institute1"></td>
+            <td id="percentage1"></td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="course2"></td>
+            <td id="year2"></td>
+            <td id="institute2"></td>
+            <td id="percentage2"></td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td id="course3"></td>
+            <td id="year3"></td>
+            <td id="institute3"></td>
+            <td id="percentage3"></td>
           </tr>
         </tbody>
       </table>
 
-      <h2>Personal_details:<span></span></h2>
-      <p>Age:<span></span></p>
-      <p>Martial_status:<span></span></p>
-      <p>Gender:<span></span></p>
-      <p>Father name:<span></span></p>
-      <p>Address:<span></span></p>
-      <p>Language:<span></span></p>
-      <p>Intrest:<span></span></p>
+         <!-- skills -->
+        <div class="row row_2">
+          <div class="col-4 margint">
+        
+                 <!-- skills -->
+                <div class="card labwidth ">
+                
+                  <div class="card-body">
+                    <h2 class="card-title bg-primary text-center text-white">Skills</h2>
+                    <p class="card-text"><p>1 <span id="skill0"></span></p></p>
+                    <p class="card-text"><p>2 <span id="skill1"></span></p></p>
+                    <p class="card-text"><p>3 <span id="skill2"></span></p></p>
+                  </div>
+                </div>
+                <div class="card labwidth">
+                    <!-- language -->
+                  <div class="card-body">
+                    <h2 class="card-title bg-primary text-white">Languages known</h2>
+                    <p class="card-text"><p>1 <span id="lang0"></span></p></p>
+                    <p class="card-text"><p>2 <span id="lang1"></span></p></p>
+                    <p class="card-text"><p>3 <span id="lang2"></span></p></p>
+                    
+                    
+                  </div>
+                </div>
+                 
+                <!-- intrest -->
+                
+                <div class="card labwidth">
+                
+                  <div class="card-body">
+                    <h2 class="card-title bg-primary text-center text-white">Intrest</h2>
+                    <p class="card-text"><p>1 <span id="int0"></span></p></p>
+                    <p class="card-text"><p>2 <span id="int1"></span></p></p>
+                    <p class="card-text"><p>3 <span id="int2"></span></p></p>
+                  </div>
+                </div>
 
-      <h2>Certification:<span></span></h2>
-      <p>Course:<span></span></p>
-      <p>Institute:<span></span></p>
-      <p>Duration:<span></span></p>
+                <div class="card labwidth">
+                
+                  <div class="card-body">
+                    <h2 class="card-title bg-primary text-center text-white">Hobbies</h2>
+                    <p class="card-text"><p>1 <span id="hob0"></span></p></p>
+                    <p class="card-text"><p>2 <span id="hob1"></span></p></p>
+                    
+                  </div>
+                </div>
+              
+          </div>       
 
-      <h2>Projects:<label></label></h2>
-      <p>Project_title:<span></span></p>
-      <p>Abstract:<span></span></p>
+                <div class="col-8">
+                      <!-- personal -->
+                      <div class="card labwidth">
+                
+                        <div class="card-body">
+                          <h2 class="card-title text-center bg-primary text-center text-white">Personal_details</h2>
+                          <p class="card-text"><p>Age:<span id="age"></span></p></p>
+                          <p class="card-text"><p >Martial_status:<span id="martial"></span></p></p>
+                          <p class="card-text"><p>Gender:<span id="gender"></span></p></p>
+                          <p class="card-text"><p>Father name:<span id="father"></span></p></p>
+                          <p class="card-text"><p>Address:<span id="address"></span></p></p>
+                          
+                        </div>
+                      </div>
+                         
 
-      <h2><label>Experience:</label></h2>
-      <p>Organization:<span></span></p>
-      <p>Role:<span></span></p>
-      <p>Work_year:<span></span></p>
-      <p>Contact:<span></span></p>
+                      
+                          
+                          <!-- certification -->
+                          <div class="card labwidth">
+                
+                            <div class="card-body">
+                              <h2 class="card-title text-center bg-primary text-center text-white">Certifications</h2>
+                              <p class="card-text"><p>Course:<span id="course_cert0"></span></p></p>
+                              <p class="card-text"><p>Institute:<span id="inst_cert0"></span></p></p>
+                              <p class="card-text"><p>Duration:<span id="dur_cert0"></span></p></p>
+                               <hr/>
+                              <p class="card-text"><p>Course:<span id="course_cert1"></span></p></p>
+                              <p class="card-text"><p>Institute:<span id="inst_cert1"></span></p></p>
+                              <p class="card-text"><p>Duration:<span id="dur_cert1"></span></p></p>
+                              
+                              
+                              
+                            </div>
+                          </div>
+                       
 
-      <h2><label>Hobbies:</label></h2>
-      <p>hobbie1<span></span></p>
-      <p>hobbie2<span></span></p>
-      
+                          <!-- project -->
+                          <div class="card labwidth">
+                
+                            <div class="card-body">
+                              <h2 class="card-title text-center bg-primary text-center text-white">Projects</h2>
+                              <p class="card-text"><p>Project_title:<span id="prot0"></span></p></p>
+                              <p class="card-text"><p>Abstract:<span id="abs0"></span></p></p>
+                              
+                               <hr/>
+                              <p class="card-text"><p>Project_title:<span id="prot1"></span></p></p>
+                              <p class="card-text"><p>Abstract:<span id="abs1"></span></p></p>
+                            
+                              
+                              
+                              
+                            </div>
+                          </div>
+                         
 
-    </div>
+                        
+                        
+                </div>
+
+          
+
+     
+         </div>
+              <!-- experience -->
+              <div class="card labwidth">
+                
+                <div class="card-body">
+                  <h2 class="card-title text-center bg-primary text-white">Experience</h2>
+                  <p class="card-text"><p>Organization:<span id="orgexp0"></span></p></p>
+                  <p class="card-text"><p>Role:<span id="roleexp0"></span></p></p>
+                  <p class="card-text"><p>Work_year:<span id="workyearexp0"></span></p></p>
+                  <p class="card-text"><p>Contact:<span id="contactexp0"></span></p></p>
+                   <hr/>
+                   <p class="card-text"><p>Organization:<span id="orgexp1"></span></p></p>
+                   <p class="card-text"><p>Role:<span id="roleexp1"></span></p></p>
+                   <p class="card-text"><p>Work_year:<span id="workyearexp1"></span></p></p>
+                   <p class="card-text"><p>Contact:<span id="contactexp1"></span></p></p>
+                  
+                  
+                  </div>
+            </div>
+   </div>
 
 
 
 
 
-    <!-- <script>
-        const k=window.location.search;
-        let c=new URLSearchParams(k)
-        let url=c.get('name')
-        alert(url)
-    </script>
-     -->
+    <script src="view.js"></script>
 </body>
 </html>

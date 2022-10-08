@@ -1,71 +1,71 @@
-let Resume={
-    name:"Benish",
-    email:"tbenish15@gmail.com",
-    phone:8056425001,
-    role:"Full Stack Devoloper",
-    objective:"To acheive a good position in a company where i can build my carrer and help the organization ",
+// let Resume={
+//     name:"Benish",
+//     email:"tbenish15@gmail.com",
+//     phone:8056425001,
+//     role:"Full Stack Devoloper",
+//     objective:"To acheive a good position in a company where i can build my carrer and help the organization ",
 
-    educational_qualification:[
-        {
-            degree:"B.E",
-            institute:"S.X.C.C.E",
-            branch:"mechanical engineering",
-            percentage:81,
-            year_of_passing:2022,
-        },
-        {
-            degree:"H.S.C",
-            institute:"st.josheph's H.S.S,thirithuvapuram",
-            branch:"maths biology",
-            percentage:88.58,
-            year_of_passing:2017,
-        },
-        {
-            degree:"S.S.L.C",
-            institute:"R.C.High school palliyadi",
-            percentage:96.60,
-            year_of_passing:2015,
-        },
-    ],
-    skills:["HTML","CSS","Java Script","python"],
-    projects:[
-        {
-            title:"project_title",
-            abstract:"project-abstract",
-            description:"desc"
-        }
-    ],
-    certifications:[
-        {
-            course:"course-name",
-            institute:"ins-name"
-        },
+//     educational_qualification:[
+//         {
+//             degree:"B.E",
+//             institute:"S.X.C.C.E",
+//             branch:"mechanical engineering",
+//             percentage:81,
+//             year_of_passing:2022,
+//         },
+//         {
+//             degree:"H.S.C",
+//             institute:"st.josheph's H.S.S,thirithuvapuram",
+//             branch:"maths biology",
+//             percentage:88.58,
+//             year_of_passing:2017,
+//         },
+//         {
+//             degree:"S.S.L.C",
+//             institute:"R.C.High school palliyadi",
+//             percentage:96.60,
+//             year_of_passing:2015,
+//         },
+//     ],
+//     skills:["HTML","CSS","Java Script","python"],
+//     projects:[
+//         {
+//             title:"project_title",
+//             abstract:"project-abstract",
+//             description:"desc"
+//         }
+//     ],
+//     certifications:[
+//         {
+//             course:"course-name",
+//             institute:"ins-name"
+//         },
        
 
-    ],
-    personal_details:{
-        age:22,
-        martial_status:"unmarried",
-        gender:"male",
-        father_name:"father name",
-        address:"place",
-        languages_known:["tamil","english"]
+//     ],
+//     personal_details:{
+//         age:22,
+//         martial_status:"unmarried",
+//         gender:"male",
+//         father_name:"father name",
+//         address:"place",
+       
 
-    },
-    experience:[
-        {
-            organization:"",
-            role:"",
-            working_years: 2,
-            contact_information:""
+//     },
+//     experience:[
+//         {
+//             organization:"",
+//             role:"",
+//             working_years: 2,
+//             contact_information:""
 
-        }, 
-    ],
-    intrests:["programming","designing"],
-    hobbies:["playing cricket",""],
+//         }, 
+//     ],
+//     intrests:["programming","designing"],
+//     hobbies:["playing cricket",""],
 
     
-}
+// }
 let resume1={
     
     
@@ -89,19 +89,13 @@ function add(key,value,index=null,indexKey=null){
     else if(key=="personal_details"){
         if(!resume1[key]){
             resume1[key]={}
-            if(indexKey=='lang'){
-                resume1[indexKey]=[]
-                resume1[key][index][indexKey]=value
-               
-                
-            }
-
+          
         }
         resume1[key][indexKey]=value;
     }
   
 
-    else if(key=="intrest" || key=="hobbies" || key=="skills"){
+    else if(key=="intrest" || key=="hobbies" || key=="skills" || key=="language"){
         if(!resume1[key]){
             resume1[key]=[]
         }
@@ -115,7 +109,7 @@ function add(key,value,index=null,indexKey=null){
     }
     
     
-    display()
+    // display()
 
 }
  function display(){

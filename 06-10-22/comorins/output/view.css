@@ -1,0 +1,63 @@
+.head h1{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 40px;
+    text-align: center;
+}
+.head .lab{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 30px;
+    width: 35%;
+
+}
+.head .headlab{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 30px;
+
+}
+.head h2{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 35px;
+}
+.row_1 .obj{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 20px;
+    
+}
+.row_2 .labwidth p{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 25px;
+    
+}
+.labwidth p{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 25px
+}
+.tablefont th{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 25px;
+
+}
+.tablefont td{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 20px;
+
+}
+.row_2 .margint{
+    margin-top: 90px;
+}
+hr{
+
+        border: 1px solid black;
+        
+    
+}
+
