@@ -15,9 +15,10 @@
             localStorage.setItem("todo",JSON.stringify([]));
 
         }
-        let list=JSON.parse(localStorage.getItem('todo'))
+        
 
         function add(){
+            let list=JSON.parse(localStorage.getItem('todo'))
             let item=document.getElementById("input").value;
             list.push(item)
             localStorage.setItem("todo",JSON.stringify(list))

@@ -8,9 +8,20 @@
 </head>
 <body>
     <script>
-            a=[1,2,3,4,5,6,7,8,9]
+          let  a=[1,2,3,4,5,1,6,7,8,9,2,3,5,1,1,2,9,8,6,7]
+            let b=[ ];
         function deleteElement(a){
-            let b=a.splice(3,5)
+            
+            for(let i=0; i<a.length; i++){
+                for(let j=i+1; j<a.length; j++){
+                    while(a[i]==a[j]){
+                       let c=a.splice(j,1);
+                      
+                    }
+                }
+                
+            }
+            b.push(a)
             console.log(b)
         }
         
