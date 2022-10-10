@@ -4,6 +4,7 @@ function generatecv(){
   c=window.location.search
   d=new URLSearchParams(c)
   url=d.get('name')
+  alert(url)
   
 
   for (let i=0; i<a.length; i++){

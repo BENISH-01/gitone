@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="add()">
+    <div class="container">
+         <p><span id="img1"></span></p>
+        <p>restaurant:<span id="name"></span></p>
+        <p><span id="food"></span></p>
+        <p>Amount:<span id="money"></span></p>
+        <p>Food type:<span id="type"></span></p>
+    </div>
+
+
+
+
+    <script>
+        function add(){
+            a=JSON.parse(localStorage.getItem("all_restaurants"))
+                c=window.location.search
+                d=new URLSearchParams(c)
+                url=d.get('name')
+                alert(url)
+            
+            for(let i=0; i<a.length ;i++){
+                for(let j=0;j<a[i].food.length;j++){
+                    if(url==a[i].food[j].food_name){
+                    document.getElementById("name").innerHTML=a[i].hotel_name;
+                    document.getElementById("img1").innerHTML=a[i].food[j].image;
+                    document.getElementById("food").innerHTML=a[i].food[j].food_name;
+                    document.getElementById("money").innerHTML=a[i].food[j].cost;
+                    document.getElementById("type").innerHTML=a[i].food[j].type
+                 
+                
+                }
+                }
+              
+            }
+            
+
+        }
+
+    </script>
+    
+</body>
+
+</html>
