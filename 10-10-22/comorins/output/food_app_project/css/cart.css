@@ -1,0 +1,29 @@
+.navfont{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+}
+.navfont .navhover a:hover{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: yellowgreen;
+}
+.navfont img{
+    width: 40%;
+}
+.cont_font h5{
+    font-family: "poppins";
+    font-style: normal;
+    font-size:20px ;
+
+}
+.cont_font p{
+    font-family: "roboto";
+    font-style: normal;
+    font-size:18px ;
+
+}
