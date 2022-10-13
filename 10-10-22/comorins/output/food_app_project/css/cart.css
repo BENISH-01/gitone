@@ -2,9 +2,7 @@
     font-family: "poppins";
     font-style: normal;
     font-size: 25px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
+    
     
 }
 .navfont .navhover a:hover{

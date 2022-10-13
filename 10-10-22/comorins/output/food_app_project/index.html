@@ -23,14 +23,17 @@
             <li class="nav-item active">
               <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item ml-5">
+            <li class="nav-item ml-3">
                 <a class="nav-link text-white" href="#">Foods</a>
-              </li>
-            <li class="nav-item ml-5">
-              <a class="nav-link text-white" href="#">Sign up</a>
             </li>
-            <li class="nav-item ml-5">
+           
+            <li class="nav-item ml-3">
                 <a class="nav-link text-white" href="cart.html">Cart</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav" id="log">
+            <li class="nav-item ml-3">
+              <a class="nav-link text-white" href="signup.html">Sign up</a>
             </li>
           </ul>
         </div>
@@ -99,7 +102,7 @@
           <a href="new.html?name=Idiyapam" ><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/esocaovtqclcl4k4zwcq" style="height:320px" class="card-img-top" alt="..."></a>
           <div class="card-body">
             <h2 class="card-title text-center">IDIYAPAM</h2>
-            <p class="text-center" >99 R.s</p>
+            <p class="text-center" >150 R.s</p>
           </div>
         </div>
     
@@ -131,7 +134,28 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+
+ let log=JSON.parse(localStorage.getItem("log_ins"));
+ let all_log=JSON.parse(localStorage.getItem("user_details"));
+
+ for(let i=0; i<all_log.length;i++){
+   let item1=''
+   let item2=''
+  if(log[0]==all_log[i].email){
+    item1=item1+"<a class='nav-link'>"
+     
+  }
+ }
+
+
+
+
+
+
+
+
+</script>
 
     
 </body>
