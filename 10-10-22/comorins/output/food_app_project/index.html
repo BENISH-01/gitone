@@ -18,32 +18,41 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul style="width: 30%;"></ul>
+            <ul style="width: 10%;"></ul>
           <ul class="navbar-nav justify-content-right navhover">
             <li class="nav-item active">
               <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item ml-3">
-                <a class="nav-link text-white" href="#">Foods</a>
+            <li class="nav-item dropdown ml-5">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Hotels
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="hotel.html?name=KFC">KFC</a>
+                <a class="dropdown-item" href="hotel.html?name=Pizza Hut">Pizza Hut</a>
+                <a class="dropdown-item" href="hotel.html?name=Hotel Ariya Bhavan">Ariya Bhavan</a>
+                <a class="dropdown-item" href="hotel.html?name=Dindugul Thalapakatti">Dindugul Thalapakatti</a>
+              </div>
             </li>
            
-            <li class="nav-item ml-3">
+           
+            <li class="nav-item ml-5">
                 <a class="nav-link text-white" href="cart.html">Cart</a>
             </li>
           </ul>
-          <ul class="navbar-nav" id="log">
-            <li class="nav-item ml-3">
-              <a class="nav-link text-white" href="signup.html">Sign up</a>
+          <ul class="navbar-nav navhover" id="log" >
+            <li class="nav-item ml-5">
+              <a class="nav-link text-white" href="login.html">Log In</a>
             </li>
           </ul>
         </div>
       </nav>
       <!-- navbar end -->
       <!-- section start -->
-      <div class="row">
+      <div class="row p-font">
         <div class="card col-4">
           <a href="new.html?name=Chicken Buckets"><img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT86.jpg?ver=20.94" class="card-img-top" alt="..."></a>
-          <div class="card-body">
+          <div class="card-body p-font">
             <h2 class="card-title text-center">BUCKET CHICKEN</h2>
             <p class="text-center" >400 R.s</p>
           </div>
@@ -65,7 +74,7 @@
         </div>
       </div>
       <!-- sectuion-2 start -->
-      <div class="row">
+      <div class="row p-font">
         <div class="card col-4">
           <a href="new.html?name=Chicken Biriyani" ><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/v056wkr3zehgrn0hmlwm" class="card-img-top" alt="..."></a>
           <div class="card-body">
@@ -73,7 +82,7 @@
             <p class="text-center" >150 R.s</p>
           </div>
         </div>
-        <div class="card col-4">
+        <div class="card col-4 ">
           <a href="new.html?name=Dosa" ><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/ypafyz3svyd4qyr8dlsg" style="height:320px" class="card-img-top" alt="..."></a>
           <div class="card-body">
             <h2 class="card-title text-center">DOSA</h2>
@@ -90,7 +99,7 @@
         </div>
       </div>
       <!-- section 3 start -->
-      <div class="row">
+      <div class="row p-font">
         <div class="card col-4">
           <a href="new.html?name=Chicken Pizza" ><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/dwhcj8f5zoh0pze32dsx" style="height:320px" class="card-img-top" alt="..."></a>
           <div class="card-body">
@@ -142,9 +151,9 @@
  for(let i=0; i<all_log.length;i++){
    let item1=''
    let item2=''
-  if(log[0]==all_log[i].email){
-    item1=item1+"<a class='nav-link'>"
-     
+  if(log[0]==all_log[i].email || log[0]==all_log[i].number){
+    item1=item1+"<a class='nav-link' href='#' id='enter'><button >Sign out</button>" + log[i].name+"<span></span> </button></a>"
+    document.getElementById("log").innerHTML=item1
   }
  }
 

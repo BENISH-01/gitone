@@ -14,3 +14,12 @@
     border-radius: 10px;
     background-color: yellowgreen;
 }
+.navfont img{
+ width: 45%;
+}
+.p-font p{
+    font-family: "poppins";
+    font-style: normal;
+    font-size: 20px;
+
+}
