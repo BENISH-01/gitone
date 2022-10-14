@@ -25,7 +25,7 @@
                   <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown ml-5">
-                  <a class="nav-link dropdown-toggle" href=""  data-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle text-white" href=""  data-toggle="dropdown" aria-expanded="false">
                     Hotels
                   </a>
                   <div class="dropdown-menu">
@@ -39,10 +39,12 @@
                 <li class="nav-item ml-5">
                     <a class="nav-link text-white" href="cart.html">Cart</a>
                 </li>
-                <li class="nav-item ml-5">
-                  <a class="nav-link text-white" href="login.html">Log In</a>
-                </li>
+                
               </ul>
+              <ul class="navbar-nav navhover">
+                <li class="nav-item active ml-5"> <a href="#"><button class="btn text-white p-0  " id="log" style=" font-family: poppins;
+                  "></button></a></li>
+               </ul>
             </div>
           </nav>
      </div>
@@ -94,6 +96,43 @@ function remove(i){
 
 
 }
+
+// log in
+let loger=JSON.parse(localStorage.getItem('log_ins'))
+        let sign=JSON.parse(localStorage.getItem('user_details'))
+        console.log(sign)
+        for(let i=0;i<sign.length;i++){
+          let ele1='';
+          let ele2='';
+          if(loger==sign[i].email){
+            console.log(loger)
+            
+          ele1=ele1+"<li><a class='nav-link' href='login.html'><button class='btn p-0 text-white' style='font-size:25px;' onclick='remove_product("+i+")'>"+"Logout"+"</button></a></li>"
+          document.getElementById('log').innerHTML=ele1
+          
+       
+        console.log(users)
+        }
+
+        
+        else{
+            ele2=ele2+"<li><a class='nav-link' href='login.html'><button class='btn p-0 text-white' style='font-size:25px;'>"+"Login"+"</button></a></li>"
+            document.getElementById('log').innerHTML=ele2
+          
+          }
+          
+          
+
+        }
+        function remove_product(i){
+    
+    let all_user=[]
+    all_user.push(loger)
+    console.log(all_user)
+    all_user.splice(i,all_user.length)
+    localStorage.setItem("log_ins",JSON.stringify(all_user))
+
+    }
    
 
 

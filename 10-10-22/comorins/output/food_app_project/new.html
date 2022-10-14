@@ -25,8 +25,8 @@
                 <li class="nav-item active">
                   <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown ml-5">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown ml-5 ">
+                  <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                     Hotels
                   </a>
                   <div class="dropdown-menu">
@@ -40,11 +40,13 @@
                 <li class="nav-item ml-5">
                     <a class="nav-link text-white" href="cart.html">Cart</a>
                 </li>
-                <li class="nav-item ml-5">
-                  <a class="nav-link text-white" href="login.html">Log In</a>
-                </li>
+                
               
               </ul>
+              <ul class="navbar-nav navhover">
+                <li class="nav-item active ml-5"> <a href="#"><button class="btn text-white p-0  " id="log" style=" font-family: poppins;
+                  "></button></a></li>
+               </ul>
             </div>
           </nav>
      </div>
@@ -64,7 +66,7 @@
                   <h5 class="card-text"><label>PRICE</label>: <span id="money"></span></h5>
                   <h5 class="card-text"><label>FOOD TYPE</label>: <span id="type"></span></h5>
                   <a><button class="btn btn-primary" onclick="cart()" >ADD CART</button></a>
-                  <a href="login.html"><button class="btn btn-success ml-5" onclick="buy()" >ORDER</button></a>
+                  <a href="buy.html"><button class="btn btn-success ml-5" onclick="buy()" >ORDER</button></a>
                 </div>
               </div>
             </div>
@@ -131,6 +133,69 @@
                     
 
         }
+        // login
+        let loger=JSON.parse(localStorage.getItem('log_ins'))
+        let sign=JSON.parse(localStorage.getItem('user_details'))
+        console.log(sign)
+        for(let i=0;i<sign.length;i++){
+          let ele1='';
+          let ele2='';
+          if(loger==sign[i].email){
+            console.log(loger)
+            
+          ele1=ele1+"<li><a class='nav-link' href='login.html'><button class='btn p-0 text-white' style='font-size:30px;' onclick='remove_product("+i+")'>"+"Logout"+"</button></a></li>"
+          document.getElementById('log').innerHTML=ele1
+          
+       
+        console.log(users)
+        }
+
+        
+        else{
+            ele2=ele2+"<li><a class='nav-link' href='login.html'><button class='btn p-0 text-white' style='font-size:30px;'>"+"Login"+"</button></a></li>"
+            document.getElementById('log').innerHTML=ele2
+          
+          }
+          
+          
+
+        }
+        function remove_product(i){
+    
+    let all_user=[]
+    all_user.push(loger)
+    console.log(all_user)
+    all_user.splice(i,all_user.length)
+    localStorage.setItem("log_ins",JSON.stringify(all_user))
+
+    }
+    function buy(){
+        
+        let b=JSON.parse(localStorage.getItem("all_restaurants"));
+              c=window.location.search;
+              d=new URLSearchParams(c);
+              url=d.get('name');
+              
+              if(!JSON.parse(localStorage.getItem("buyp"))){
+               localStorage.setItem("buyp",JSON.stringify([]))
+              }
+          let new_buy=JSON.parse(localStorage.getItem("buyp"))
+          
+      let k=[]
+              for(let i=0; i<b.length ;i++){
+              for(let j=0;j<b[i].food.length;j++){
+                  if(url==b[i].food[j].food_name){
+                    k.push(b[i].food[j])
+              }
+
+              }
+            localStorage.setItem("buyp",JSON.stringify(k));
+
+            
+          }
+                  
+
+      }
 
     </script>
     
