@@ -50,8 +50,9 @@
          details=JSON.parse(localStorage.getItem("user_details"))
         for(let i=0; i<details.length; i++){
             if(nm==details[i].email || nm==details[i].number && pw==details[i].pass){
-                 document.querySelector('#next').setAttribute('href','index.html')
                 localStorage.setItem("log_ins",JSON.stringify(nm))
+                 document.querySelector('#next').setAttribute('href','index.html')
+                
                 }
             
 

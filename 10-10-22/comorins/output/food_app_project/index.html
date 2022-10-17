@@ -154,20 +154,21 @@
 
 
 
-let loger=JSON.parse(localStorage.getItem('log_ins'))
+        let loger=JSON.parse(localStorage.getItem('log_ins'))
         let sign=JSON.parse(localStorage.getItem('user_details'))
-        console.log(sign)
         for(let i=0;i<sign.length;i++){
           let ele1='';
           let ele2='';
-          if(loger==sign[i].email || loger==sign[i].number){
+          if(loger==sign[i].email || loger==sign[i].number ){
             console.log(loger)
             
-          ele1=ele1+"<li><a class='nav-link' href='login.html'><button class='btn p-0 text-white' style='font-size:30px;' onclick='remove_product("+i+")'>"+"Logout"+"</button></a></li>"
+          ele1=ele1+"<li><a class='nav-link' href='login.html'><button class='btn p-0 text-white' style='font-size:30px;' onclick='remove_product("+i+")'>"+"Logout-"+sign[i].name+"</button></a></li>"
           document.getElementById('log').innerHTML=ele1
           
        
-        console.log(users)
+       
+       
+            break
         }
 
         
@@ -181,12 +182,11 @@ let loger=JSON.parse(localStorage.getItem('log_ins'))
 
         }
         function remove_product(i){
-    
-    let all_user=[]
-    all_user.push(loger)
-    console.log(all_user)
-    all_user.splice(i,all_user.length)
-    localStorage.setItem("log_ins",JSON.stringify(all_user))
+          let all_user=[];
+          all_user.push(loger)
+          all_user.splice(0,all_user.length)
+          console.log(all_user)
+          localStorage.setItem("log_ins",JSON.stringify(all_user))
 
     }
     
