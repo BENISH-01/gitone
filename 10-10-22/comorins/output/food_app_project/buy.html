@@ -79,17 +79,31 @@
     <script>
    
    function show(){
+                wind=window.location.search;
+                url_all=new URLSearchParams(wind);
+                url=url_all.get('name');
+     
     let c=JSON.parse(localStorage.getItem("buyp"))
+    let full_cart=JSON.parse(localStorage.getItem("cart"))
 
-    let element=" "
+    let element1=" "
+   let  element2=''
+     if(url=="cart"){
+       for(let i=0; i<full_cart.length;i++){
+        element1=element1+"<li style='display:inline-block'>"+"<div class='  mt-2'>"+"<h3>"+full_cart[i].food_name+"</h3>"+"<img style='width:80%'  src="+full_cart[i].image+"/>"+"<h4 class=''>"+'Food Type : '+full_cart[i].type+"</h4>"+"<h5 class=''>"+'Food cost : '+ full_cart[i].cost+"</h5>" +"</li>"
+       }
+       document.getElementById("buyed").innerHTML=element1;
+     }
     
-    
+    else{
     for(let i=0; i<c.length;i++){
-        element=element+"<li style='display:inline-block'>"+"<div class='  mt-2'>"+"<h3>"+c[i].food_name+"</h3>"+"<img style='width:80%'  src="+c[i].image+"/>"+"<h4 class=''>"+'Food Type : '+c[i].type+"</h4>"+"<h5 class=''>"+'Food cost : '+ c[i].cost+"</h5>" +"</li>"
+        element2=element2+"<li style='display:inline-block'>"+"<div class='  mt-2'>"+"<h3>"+c[i].food_name+"</h3>"+"<img style='width:80%'  src="+c[i].image+"/>"+"<h4 class=''>"+'Food Type : '+c[i].type+"</h4>"+"<h5 class=''>"+'Food cost : '+ c[i].cost+"</h5>" +"</li>"
         
         
     }
-    document.getElementById("buyed").innerHTML=element;
+    document.getElementById("buyed").innerHTML=element2;
+  }
+    
    }
 
    function end(){
