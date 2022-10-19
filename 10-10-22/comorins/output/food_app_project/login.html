@@ -52,6 +52,7 @@
             if(nm==details[i].email || nm==details[i].number && pw==details[i].pass){
                 localStorage.setItem("log_ins",JSON.stringify(nm))
                  document.querySelector('#next').setAttribute('href','index.html')
+                 alert("Welcome "+details[i].name+" You are logged in successfully")
                 
                 }
             

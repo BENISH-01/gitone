@@ -16,7 +16,7 @@
         
 
    </div>
-        <form class="needs-validation mr-auto ml-auto was-validated" style="width: 50%" >
+        <form class=" mr-auto ml-auto was-validated" style="width: 50%" >
          
             <div class="ml-auto ">
             <div class="mb-3">
@@ -36,24 +36,22 @@
             
             <h3 class="mt-4">Select Your Payment Method</h3>
             <div >
-                <input name="1"  type="radio" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2 text-left">
+                <input name="1"  type="radio"  value="option2">
+                <label class="text-left">
                   Cash On Delivery
                 </label>
               </div>
-            <div >
+            <div class="mt-2" >
                 
-                <input name="1" type="radio" value="option1" checked> UPI
+                <input name="1" type="radio" value="option1" > UPI
+                <input placeholder="enter your upi id" class="form-control"/>
                 
-                  
-                  <input placeholder="enter your upi id" class="form-control"/>
-                </label>
-              </div>
+             </div>
              
-              <div >
-                <input type="radio" name="1"id="exampleRadios2" value="option2">Credit card
-                <input placeholder="enter card number "class="form-control "/>
-                <input placeholder="cvv" class="form-control "  />
+              <div class="mt-3" >
+                <input type="radio" name="1" value="option2">Credit card
+                <input placeholder="enter card number "class="form-control mt-2 "/>
+                <input placeholder="cvv" class="form-control mt-2"  />
 
               </div>
               
@@ -66,7 +64,7 @@
   
    
    
-   <button class="btn btn-danger" onclick="end()" style="width: 100%">Place Order</button>
+   <button class="btn btn-danger" onclick="end()" style="width: 100%">Place Order-Total-₹<span id="amount"></span></button>
 
 
 
@@ -87,21 +85,32 @@
     let full_cart=JSON.parse(localStorage.getItem("cart"))
 
     let element1=" "
-   let  element2=''
+    let  element2=''
      if(url=="cart"){
        for(let i=0; i<full_cart.length;i++){
         element1=element1+"<li style='display:inline-block'>"+"<div class='  mt-2'>"+"<h3>"+full_cart[i].food_name+"</h3>"+"<img style='width:80%'  src="+full_cart[i].image+"/>"+"<h4 class=''>"+'Food Type : '+full_cart[i].type+"</h4>"+"<h5 class=''>"+'Food cost : '+ full_cart[i].cost+"</h5>" +"</li>"
        }
        document.getElementById("buyed").innerHTML=element1;
+      //  total amount
+       let total=0;
+       let total_cart=JSON.parse(localStorage.getItem("cart"))
+    
+      for(let i=0; i<total_cart.length; i++){
+         total=total+total_cart[i].rate
+      }
+    document.getElementById("amount").innerHTML=total;
+       
      }
     
     else{
     for(let i=0; i<c.length;i++){
         element2=element2+"<li style='display:inline-block'>"+"<div class='  mt-2'>"+"<h3>"+c[i].food_name+"</h3>"+"<img style='width:80%'  src="+c[i].image+"/>"+"<h4 class=''>"+'Food Type : '+c[i].type+"</h4>"+"<h5 class=''>"+'Food cost : '+ c[i].cost+"</h5>" +"</li>"
         
-        
+          document.getElementById("amount").innerHTML=c[i].rate;  
     }
     document.getElementById("buyed").innerHTML=element2;
+    
+
   }
     
    }
