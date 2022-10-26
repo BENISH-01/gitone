@@ -54,7 +54,7 @@
     <ol id="orderd">
        </ol>
    </div>
-  <a href="buy.html?name=cart"> <button type="button" class="btn btn-success btn-lg btn-block">Buy All Items   -₹ <span id="allitems"></span> only /</button></a>
+   <button type="button" onclick="buycart()" class="btn btn-success btn-lg btn-block">Buy All Items   -₹ <span id="allitems"></span> only /</button>
    
 
 
@@ -66,6 +66,7 @@
 
 
 <script>
+   
   
     function mycart(){
     let c=JSON.parse(localStorage.getItem("cart"))
@@ -128,6 +129,21 @@ let loger=JSON.parse(localStorage.getItem('log_ins'))
           
 
         }
+
+        function buycart(){
+          for(let i=0;i<sign.length;i++){
+          
+          if(loger==sign[i].email || loger==sign[i].number ){
+             window.location.replace('buy.html?name=cart')
+             break
+          }
+          else if(loger!=sign[i].email || loger!=sign[i].number ){
+            window.location.replace("login.html")
+            
+          }
+        
+        }
+      }
         function remove_product(i){
           let all_user=[];
           all_user.push(loger)

@@ -88,7 +88,7 @@
     let  element2=''
      if(url=="cart"){
        for(let i=0; i<full_cart.length;i++){
-        element1=element1+"<li style='display:inline-block'>"+"<div class='  mt-2'>"+"<h3>"+full_cart[i].food_name+"</h3>"+"<img style='width:80%'  src="+full_cart[i].image+"/>"+"<h4 class=''>"+'Food Type : '+full_cart[i].type+"</h4>"+"<h5 class=''>"+'Food cost : '+ full_cart[i].cost+"</h5>" +"</li>"
+        element1=element1+"<li style='display:inline-block'>"+"<div class='  mt-2'>"+"<h3>"+full_cart[i].food_name+"</h3>"+"<img style='width:80%'  src="+full_cart[i].image+"/>"+"<h4 class=''>"+'Food Type : '+full_cart[i].type+"</h4>"+"<h5 class=''>"+'Food cost : '+ full_cart[i].cost+"</h5>"+"</li>"
        }
        document.getElementById("buyed").innerHTML=element1;
       //  total amount
@@ -96,7 +96,7 @@
        let total_cart=JSON.parse(localStorage.getItem("cart"))
     
       for(let i=0; i<total_cart.length; i++){
-         total=total+total_cart[i].rate
+         total=total+total_cart[i].rate;
       }
     document.getElementById("amount").innerHTML=total;
        
