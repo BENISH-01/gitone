@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- style -->
+    <style>
+        .other{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">Hello Everyone</div>
+    <p id="change">This is Heading</p>
+    <button id="changer">New</button>
+    
+
+
+
+
+
+    <script type="text/javascript"src="https://code.jquery.com/jquery-3.6.1.min.js"
+   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        // $("#changer").click(function(){
+        //     // $("#wrapper").html('welcome')
+        //     // $("#wrapper").css("color",'red')
+        //     $("#wrapper").toggleClass('other')
+        // })
+        $("#changer").on("click",function(){
+            // $("#wrapper").html('welcome')
+            // $("#wrapper").css("color",'red')
+            $("#wrapper").toggleClass('other')
+            
+        })
+        $("#change").on({
+            click:function(){
+                $(this).css('background','red')
+                $(this).css('font-size','20px')
+            },
+             mouseenter:function(){
+                $(this).css('background','green')
+            }, 
+            mouseleave:function(){
+                $(this).css('background','yellow')
+            }
+        })
+        
+
+    });
+  </script>
+</body>
+</html>

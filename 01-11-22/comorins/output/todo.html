@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    
+
+<button>Get</button>
+<div class="row " id="details"></div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+   crossorigin="anonymous"></script>
+
+   <script>
+        $(document).ready(function(){
+    
+        $("button").click(function(){
+            $.ajax({
+                url:"https://dummyjson.com/todos",
+                success:function(data){
+                 console.log(data)
+                 let ele=''
+                 let todo=data.todos
+                 console.log(todo)
+                    for(let i=0; i<todo.length; i++){
+                    
+                        ele= ele+"<div class=' card col-3'>"+"<p>"+todo[i].id+"</p>"+"<p>"+todo[i].todo+"</p>"+"<p>"+todo[i].completed+"</p>"+"</div>"
+                       
+                    }
+                    $("#details").append(ele);
+                }
+        
+            })
+        })
+    
+    })
+
+   </script>
+</body>
+</html>
