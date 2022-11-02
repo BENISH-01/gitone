@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="css/resume_api.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>Document</title>
 </head>
-<body>
+<body id="total_body">
     <form>
         <div class="container_fluid main">
           <h1 class="text-center mb-5">Fill Your Details</h1>
@@ -45,7 +46,7 @@
            
           <!-- hobbies -->
          <label class="label_font">Hobbies:</label><input class="style" type="text" onkeyup="add('hobbies',this.value,0)"/>
-                                            <input class="style" type="text" onkeyup="add('hobbies',this.value,1)"/>
+                                            <input class="style" type="text" onkeyup="add('hobbies',this.value,1)"/><br><br>
     
           <!-- education -->
           <label class="label_font">EDUCATION:</label>
@@ -191,59 +192,80 @@
        </form>
        <div class="container-fluid  main main1 p-5">
           <div id="code"></div>
-          <button id="submit"  class="btn btn-primary ">Submit</button>
-            <button id="list" onclick="resume_list()" class="btn btn-success listbtn">Resume lists</button>
-            <ul id="new_resume" class="text-center" >
-              
-            </ul>
-       </div>
+            <button id="submit"  class="btn subbutn btn-primary ">Submit</button>
+            <button id="list"  class="btn btn-success listbtn">Get</button>
+            <!-- <button id="remove_list"  class="btn btn-danger listbtn">Delete</button> -->
+            
+          </div>
+          <ul id="all_name"></ul>
+
+          <!-- tabel -->
+          <table class="table">
+            <thead>
+              <th>SI.NO</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>PHONE</th>
+              <th>ACTION</th>
+              <th>VIEW</th>
+            </thead>
+            <tbody id="table_val">
+              <tr >
+
+              </tr>
+
+            </tbody>
+
+
+          </table>
+
+
        <!-- script -->
        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"></script>
 
-       <script >
+       <script>
 
-        let resume1={
-    
-    
-}
+        let resume={
+          
+        }
 
 function add(key,value,index=null,indexKey=null){
     if(index==null){
-        resume1[key]=value;
+        resume[key]=value;
     }
     else if(key=="education" || key=="certification" || key=="experience" ||key=="project"){
-        if(!resume1[key]){
-            resume1[key]=[];
+        if(!resume[key]){
+            resume[key]=[];
         }
-        if(!resume1[key][index]){
-            resume1[key][index]={}
+        if(!resume[key][index]){
+            resume[key][index]={}
 
         } 
         
-        resume1[key][index][indexKey]=value
+        resume[key][index][indexKey]=value
     }
     else if(key=="personal_details"){
-        if(!resume1[key]){
-            resume1[key]={}
+        if(!resume[key]){
+            resume[key]={}
           
         }
-        resume1[key][indexKey]=value;
+        resume[key][indexKey]=value;
     }
   
 
     else if(key=="intrest" || key=="hobbies" || key=="skills" || key=="language"){
-        if(!resume1[key]){
-            resume1[key]=[]
+        if(!resume[key]){
+            resume[key]=[]
         }
-        resume1[key][index]=value
+        resume[key][index]=value
     }
 
     
 
     else{
-        resume1[key][index]=value;
+        resume[key][index]=value;
     }
     
     
@@ -253,21 +275,146 @@ function add(key,value,index=null,indexKey=null){
 
 
 $(document).ready(function(){
+  // table
+  $.ajax({
+        type:'get',
+        url:"http://karka.academy/api/action.php",
+        data:{
+          request:"get_user_resume",
+          user:"benish"
+        },
+        success:function(data){
+          console.log(data)
+          data_1=JSON.parse(data)
+          console.log(data_1)
+          
+          let ele=''
+          for(let i=0; i<data_1.data.length; i++){ 
+            let data_2=JSON.parse(data_1.data[i].data);
+            console.log(data_2)
+            ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success'>"+'view'+"</button>"+"</td>"+"</tr>"
+           
+          }
+          $("#table_val").append(ele);
+        }
+  })
+  
+  // submit
     $("#submit").click(function(){
         $.ajax({
             type:"post",
-            url:" http://karka.academy/api/action.php",
+            url:"http://karka.academy/api/action.php",
             data:{
                 request:"create_resume",
                 user:"benish",
-                resume1
+                resume
+                
             },
             success:function(data){
                 console.log(data)
-                }
+            }
+            
             
         })
+        $.ajax({
+        type:'get',
+        url:"http://karka.academy/api/action.php",
+        data:{
+          request:"get_user_resume",
+          user:"benish"
+        },
+        success:function(data){
+          console.log(data)
+          data_1=JSON.parse(data)
+          console.log(data_1)
+          
+          let ele=''
+          for(let i=0; i<data_1.data.length; i++){ 
+            let data_2=JSON.parse(data_1.data[i].data);
+            console.log(data_2)
+            ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success' >"+'view'+"</button>"+"</td>"+"</tr>"
+           console.log(data_1.data[i].id)
+          }
+          $("#table_val").html(ele);
+        }
+  })
+    });
+    $("#list").click(function(){
+      $.ajax({
+        type:'get',
+        url:"http://karka.academy/api/action.php",
+        data:{
+          request:"get_user_resume",
+          user:"benish"
+        },
+        success:function(data){
+          console.log(data)
+        },
+        
+      })
+    });
+
+    // delete
+    $("body").on("click","#remove_list",function(){
+      alert("This id will be deleted permenetly")
+      let del_id=this.value;
+      console.log(del_id)
+      $.ajax({
+        type:"get",
+        url:"http://karka.academy/api/action.php",
+        data:{
+          request:"delete_user_resume",
+          user:"benish",
+          id:del_id
+      
+        },
+        success:function(data){
+          console.log(data)
+          $.ajax({
+            type:'get',
+            url:"http://karka.academy/api/action.php",
+            data:{
+              request:"get_user_resume",
+              user:"benish"
+            },
+            success:function(data){
+              console.log(data)
+              data_1=JSON.parse(data)
+              console.log(data_1)
+              
+              let ele=''
+              for(let i=0; i<data_1.data.length; i++){ 
+                let data_2=JSON.parse(data_1.data[i].data);
+                console.log(data_2)
+                ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success'>"+'view'+"</button>"+"</td>"+"</tr>"
+              
+              }
+              $("#table_val").html(ele);
+            }
+  })
+          
+
+        }
+      })
     })
+
+  // view
+    $.ajax({
+      type:"get",
+      url:"http://karka.academy/api/action.php",
+      data:{
+           request:"get_resume_by_id",
+           user:"benish",
+           id:935
+      },
+      success:function(data){
+        console.log(data)
+      }
+      
+
+    })
+
+
 })
 
 
