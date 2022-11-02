@@ -292,7 +292,7 @@ $(document).ready(function(){
           for(let i=0; i<data_1.data.length; i++){ 
             let data_2=JSON.parse(data_1.data[i].data);
             console.log(data_2)
-            ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success'>"+'view'+"</button>"+"</td>"+"</tr>"
+            ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success' id='show_res' value="+data_1.data[i].id+">"+'view'+"</button>"+"</td>"+"</tr>"
            
           }
           $("#table_val").append(ele);
@@ -332,8 +332,9 @@ $(document).ready(function(){
           for(let i=0; i<data_1.data.length; i++){ 
             let data_2=JSON.parse(data_1.data[i].data);
             console.log(data_2)
-            ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success' >"+'view'+"</button>"+"</td>"+"</tr>"
+            ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success' id='show_res' value="+data_1.data[i].id+" >"+'view'+"</button>"+"</td>"+"</tr>"
            console.log(data_1.data[i].id)
+           
           }
           $("#table_val").html(ele);
         }
@@ -386,7 +387,7 @@ $(document).ready(function(){
               for(let i=0; i<data_1.data.length; i++){ 
                 let data_2=JSON.parse(data_1.data[i].data);
                 console.log(data_2)
-                ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success'>"+'view'+"</button>"+"</td>"+"</tr>"
+                ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success'id='show_res' value="+data_1.data[i].id+">"+'view'+"</button>"+"</td>"+"</tr>"
               
               }
               $("#table_val").html(ele);
@@ -399,19 +400,23 @@ $(document).ready(function(){
     })
 
   // view
-    $.ajax({
-      type:"get",
-      url:"http://karka.academy/api/action.php",
-      data:{
-           request:"get_resume_by_id",
-           user:"benish",
-           id:935
-      },
-      success:function(data){
-        console.log(data)
-      }
+    $("body").on("click","#show_res",function(){
+      let needed_res=this.value;
       
+      $.ajax({
+        type:"get",
+        url:"http://karka.academy/api/action.php",
+        data:{
+          request:"get_resume_by_id",
+          user:"benish",
+          id:needed_res,
+          },
+        success:function(data){
+             console.log(data)
+             
+        }
 
+      })
     })
 
 
