@@ -192,8 +192,8 @@
        </form>
        <div class="container-fluid  main main1 p-5">
           <div id="code"></div>
-            <button id="submit"  class="btn subbutn btn-primary ">Submit</button>
-            <button id="list"  class="btn btn-success listbtn">Get</button>
+            <button id="submit"  class="btn subbutn btn-primary btn-block ">Submit</button>
+          
             <!-- <button id="remove_list"  class="btn btn-danger listbtn">Delete</button> -->
             
           </div>
@@ -267,16 +267,14 @@ function add(key,value,index=null,indexKey=null){
     else{
         resume[key][index]=value;
     }
-    
-    
-
-
 }
 
 
 $(document).ready(function(){
-  // table
-  $.ajax({
+
+  // common function
+function full(){
+    $.ajax({
         type:'get',
         url:"http://karka.academy/api/action.php",
         data:{
@@ -286,18 +284,21 @@ $(document).ready(function(){
         success:function(data){
           console.log(data)
           data_1=JSON.parse(data)
-          console.log(data_1)
           
           let ele=''
           for(let i=0; i<data_1.data.length; i++){ 
             let data_2=JSON.parse(data_1.data[i].data);
             console.log(data_2)
-            ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success' id='show_res' value="+data_1.data[i].id+">"+'view'+"</button>"+"</td>"+"</tr>"
+            ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<a href='view.html?id="+data_1.data[i].id+"'>"+"<button  class='btn btn-success' id='show_res' value="+data_1.data[i].id+">"+'view'+"</button>"+"</a>"+"</td>"+"</tr>"
            
           }
-          $("#table_val").append(ele);
+          $("#table_val").html(ele);
         }
   })
+}
+  // table
+ full()
+  
   
   // submit
     $("#submit").click(function(){
@@ -312,48 +313,13 @@ $(document).ready(function(){
             },
             success:function(data){
                 console.log(data)
+                full()
             }
             
-            
         })
-        $.ajax({
-        type:'get',
-        url:"http://karka.academy/api/action.php",
-        data:{
-          request:"get_user_resume",
-          user:"benish"
-        },
-        success:function(data){
-          console.log(data)
-          data_1=JSON.parse(data)
-          console.log(data_1)
-          
-          let ele=''
-          for(let i=0; i<data_1.data.length; i++){ 
-            let data_2=JSON.parse(data_1.data[i].data);
-            console.log(data_2)
-            ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success' id='show_res' value="+data_1.data[i].id+" >"+'view'+"</button>"+"</td>"+"</tr>"
-           console.log(data_1.data[i].id)
-           
-          }
-          $("#table_val").html(ele);
-        }
-  })
-    });
-    $("#list").click(function(){
-      $.ajax({
-        type:'get',
-        url:"http://karka.academy/api/action.php",
-        data:{
-          request:"get_user_resume",
-          user:"benish"
-        },
-        success:function(data){
-          console.log(data)
-        },
         
-      })
     });
+ 
 
     // delete
     $("body").on("click","#remove_list",function(){
@@ -371,53 +337,12 @@ $(document).ready(function(){
         },
         success:function(data){
           console.log(data)
-          $.ajax({
-            type:'get',
-            url:"http://karka.academy/api/action.php",
-            data:{
-              request:"get_user_resume",
-              user:"benish"
-            },
-            success:function(data){
-              console.log(data)
-              data_1=JSON.parse(data)
-              console.log(data_1)
-              
-              let ele=''
-              for(let i=0; i<data_1.data.length; i++){ 
-                let data_2=JSON.parse(data_1.data[i].data);
-                console.log(data_2)
-                ele= ele+"<tr>"+"<td>"+parseInt(i+1)+"</td>"+"<td>"+data_2.name+"</td>"+"</td>"+"<td>"+data_2.email+"</td>"+"<td>"+data_2.phone+"</td>"+"<td>"+"<button class='btn btn-primary' id='remove_list' value="+data_1.data[i].id+">"+'Remove'+"</button>"+"</td>"+"<td>"+"<button class='btn btn-success'id='show_res' value="+data_1.data[i].id+">"+'view'+"</button>"+"</td>"+"</tr>"
-              
-              }
-              $("#table_val").html(ele);
-            }
-  })
-          
-
-        }
+           full()
+          }
       })
     })
 
-  // view
-    $("body").on("click","#show_res",function(){
-      let needed_res=this.value;
-      
-      $.ajax({
-        type:"get",
-        url:"http://karka.academy/api/action.php",
-        data:{
-          request:"get_resume_by_id",
-          user:"benish",
-          id:needed_res,
-          },
-        success:function(data){
-             console.log(data)
-             
-        }
-
-      })
-    })
+  
 
 
 })
