@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Companies started after 1987:</label>
+    <div id="val"></div>
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script>
+
+$(document).ready(function(){
+    let companies=[
+            {
+                name:'Google',
+                started_year:1998
+            },
+            {
+                name:'TCS',
+                started_year:1968
+            },
+            {
+                name:'Infosys',
+                started_year:1981
+            },
+            {
+                name:'Comorins',
+                started_year:2018
+            },
+            {
+                name:'BIRLA CORP. LTD',
+                started_year:1919
+            },
+            {
+                name:'HINDUSTAN VANASPATI MANUFACTURING CO',
+                started_year:1931
+            }
+            
+        ]
+
+     let a=companies.filter((data)=>{
+        return data.started_year>1987
+     })
+     let b=a.map((data)=>{
+        return data.name
+     })
+     console.log(b)
+     
+     $("#val").html(`${b},`)
+})
+
+  </script>
+</body>
+</html>

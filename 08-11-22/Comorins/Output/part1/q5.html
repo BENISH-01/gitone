@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Ages in descending order:</label><span id="val"></span><br/>
+    <label>Total of ages:</label><span id="total_age"></span></br>
+    <label>Total of numbers:</label><span id="total_val"></span>
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+   $(document).ready(function(){
+//   excercise-5
+    let details=[
+        {
+            name:'benish',
+            age:22
+        },
+        {
+            name:'ben',
+            age:20
+        },
+        {
+            name:'abi',
+            age:19
+        },
+        {
+            name:'abishek',
+            age:15
+        },
+    ]
+   let a=details.map((data)=>{
+        return data.age
+    });
+     let b=a.sort((a,b)=>{
+        return b-a
+     })
+     $("#val").html(b+'')
+     console.log(b)
+    //  excercise-5 end
+
+     //    excercise -6 start
+    let c=a.reduce((total,num)=>{
+    return total+num
+    })
+        console.log(c)
+        $("#total_age").html(c+'')
+    // excercise-6 end
+
+    // excercise -7 start
+    let companies=
+        {
+            company_name:'Google',
+            category:'IT industry',
+            print:function(){
+                return this.company_name
+            }
+        }
+        //   {company_name:name,print:x}=companies
+  
+
+        console.log(companies.print())
+        // console.log(x)
+
+        // excercise 7 end
+
+        // excercise 8 start
+        let  print_number = (...num)=> {
+            let sum=0
+            for(let x of num){
+                sum=sum+x
+                
+            }
+            console.log(sum)
+            $("#total_val").html(sum)
+        }
+        print_number(2,3,4,5)
+        // excersice 8 end
+
+        // excercise 9 start
+        let arrayAdd=(...add)=>{
+            return (add)
+        }
+        let arr2=[9,10,11,'welcome']
+      console.log (arrayAdd('hi',1,2,3,'hello',...arr2))
+        // excercise 9 end
+
+        // excercise 10 start
+        let person={
+            name:'benish',
+            details:{
+                street:'palliyadi',
+                city:'marthandam'
+            }
+        }
+        let {details:{street:place}}=person;
+        console.log(place)
+        // excercise 10 end
+
+        // excercise 11 start
+        let x = -1; 
+        let add=()=>{ return x = x + 1; }
+        console.log(add())
+        console.log(add())
+        console.log(add())
+        console.log(add())
+        // excercise 11 end
+
+        // excercise 12 start
+       
+
+        
+
+   })
+
+
+    </script>
+</body>
+</html>

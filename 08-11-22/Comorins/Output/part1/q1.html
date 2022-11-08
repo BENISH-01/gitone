@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Company Names Are</label>
+    <div id="val"></div>
+
+
+
+
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
+    <script>
+       $(document).ready(function(){
+        let companies=[
+            {
+                name:'Google',
+                started_year:1998
+            },
+            {
+                name:'TCS',
+                started_year:1968
+            },
+            {
+                name:'Infosys',
+                started_year:1981
+            },
+            {
+                name:'Comorins',
+                started_year:2018
+            }
+        ]
+        companies.forEach((data)=>{
+            let a=''
+            a=data.name
+            $("#val").append(` ${a},`)
+        })
+
+        
+        
+       })
+        
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+        //    excercise-1 start
+         let sumofAll=(x,y=1)=>x+y;
+         console.log(sumofAll(2))
+         console.log(sumofAll(2,5))
+        //  excercise-1 end
+
+        // excercise-2 start
+        class Book{
+            constructor(title,year){
+                this.title=title;
+                this.year=year;
+
+            }
+            static show=()=>{
+                return new Book('Harry Potter',1990)
+            }
+            
+        }
+         console.log(Book.show())
+        //  excercise-2 end
+
+        // excercise-3 start
+        let obj1={
+            name:'benish',
+            age:22
+        }
+        let obj2={
+            name:'benish',
+            age:24
+        }
+       let check=()=>{
+          for(let x in obj2){
+            if(obj1[x]==obj2[x]){
+                return true
+            }
+            else{
+                return false
+            }
+          }
+        }
+       console.log(check(obj1,obj2))
+
+
+
+
+        })
+    </script>  
+</body>
+</html>

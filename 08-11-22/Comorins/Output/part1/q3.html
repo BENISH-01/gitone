@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="details">
+        <h2>Retailed Companies Are:</h2>
+    </div><hr/>
+    <div id="sorted_year">
+         <h2>Sorted based on year:</h2>
+    </div>
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script>
+
+$(document).ready(function(){
+    // excercise 3 start
+    let companies=[
+            {
+                name:'Google',
+                started_year:1998,
+                end_year:3000,
+                category:'retail'
+            },
+            {
+                name:'TCS',
+                started_year:1968,
+                end_year:2050,
+                category:'non-retail'
+            },
+            {
+                name:'Infosys',
+                started_year:1981,
+                end_year:2070,
+                category:'retail'
+            },
+            {
+                name:'Comorins',
+                started_year:2018,
+                end_year:3000,
+                category:'non-retail'
+            },
+            {
+                name:'BIRLA CORP. LTD',
+                started_year:1919,
+                end_year:2050,
+                category:'retail'
+            },
+            {
+                name:'HINDUSTAN VANASPATI MANUFACTURING CO',
+                started_year:1931,
+                end_year:2025,
+                category:'non-retail'
+            }
+            
+        ]
+
+     let a=companies.filter((data)=>{
+        return data.category=='retail'
+     })
+     
+
+     let c=a.forEach((data)=>{
+        let ele=''
+       ele=`<p>Company_name:${data.name}</p><p>category:${data.category}</p><p>started_year:${data.started_year}</p><p>Incremented_year:${parseInt(data.started_year+1)}</p><p>end_year:${data.end_year}</p>`
+       $("#details").append(ele)
+     })
+    //  excercise 3 end
+
+    // excercise 4 start
+    let  sorted_year=companies.sort((a,b)=>(a.end_year>b.end_year)?1: (a.end_year<b.end_year)?-1:0)
+    let sorted_year1= sorted_year.forEach((data)=>{
+        let sort=''
+         sort=`<p>Company_name:${data.name}</p><p>category:${data.category}</p><p>started_year:${data.started_year}</p><p>end_year:${data.end_year}</p>`
+          $("#sorted_year").append(sort)
+          console.log(sorted_year)
+       })
+        
+   
+    
+})
+
+
+</script>
+    
+</body>
+</html>
