@@ -59,6 +59,55 @@
           }
         }
        console.log(check(obj1,obj2))
+    //    excercise-3 end
+    var arr=[18,19,20,56,45,70,90,60,22]
+    let filterd_arr=arr.filter((data)=>{
+     return data<50
+    })
+  
+    
+    
+    for(let i=0; i<arr.length; i++){
+        for(let j=0; j<filterd_arr.length; j++){
+            if(arr[i]==filterd_arr[j]){
+               arr.splice(i,1)
+               
+            }
+        }
+        
+    }
+    console.log(arr)
+    
+    // excercise 4 end
+
+    // excercise 5 start
+    let value_checker=(value)=>{
+        return typeof value
+    }
+    
+    console.log(value_checker(1))
+    console.log(value_checker('hello'))
+    console.log(value_checker())
+    
+    // excercise 5 end
+
+    // excercise 6 start
+    let object={
+            name:'benish',
+            age:22,
+            aboutme:{
+                favourites:{
+                    color:'Red',
+                    city:'Paris'
+                }
+            }
+    }
+    let{aboutme:{favourites:{color:my,city:my1}}}=object
+    console.log(my)
+    // excercise 6 end
+
+
+
 
 
 

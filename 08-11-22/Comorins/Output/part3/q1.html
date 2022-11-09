@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function(){
+        //   excercise 1 start
+        let person={
+            name:'benish',
+            age:22,
+            address:{
+                street:'pallyadi',
+                city:'marthandam'
+
+            }
+        }
+        for(data in person){
+            console.log(person[data])
+        }
+        // excercise 1 end
+
+        // excercise 2 start
+
+
+        // excercise 3 start
+        console.warn("please update your browser")
+        // excercise 3 end
+
+        // excercise 4 start
+        console.error("invalid password")
+        // excercise 4 end
+
+        // excercise 5 start
+        let p={
+            name:'benish',
+            age:22
+        }
+        console.log(p)
+        // excercise 5 end
+
+        // excercise 6 start
+           let my_function=(x,y)=>{
+            try {
+                if(x=="" || y=="") throw "input is empty"
+                if(isNaN(x) || isNaN(y)) throw "input must be a number"
+                if(x === y) throw "Two values are same";
+                if(x<y) throw `${x} is smaller than ${y}`
+                if(x>y) throw `${x} is bigger than ${y}`
+            
+            }
+            catch(ans) {
+                console.log(ans)
+            }
+            finally {
+              console.log('process finished')
+            }
+            
+           }
+           my_function(9,9)
+           my_function(9,10)
+           my_function('',9)
+           my_function('hi','hello')
+        //    excercise 6 end
+
+        // excercise 7 start
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+        }
+        console.log('Today is '+day)
+        // excercise 7 end
+
+        // excercise 8 start
+        let empty_object={}
+        let value_object={name:'benish'}
+            let first_obj= (data)=> {
+                return Object.values(data).length===0;
+            }
+            console.log(first_obj(empty_object))
+            console.log(first_obj(value_object))
+
+            let second_obj=(data)=>{
+                return JSON.stringify(data) === '{}'
+            }
+            console.log(first_obj(empty_object))
+            console.log(first_obj(value_object))
+        
+            console.log(jQuery.isEmptyObject(empty_object))
+
+        // excercise 8 end
+
+        // excercise 9 start
+        arr=[1,2,3,4,5]
+        let first=arr.filter((data)=>{
+             return data<4
+        })
+        console.log("values less than 4:"+first)
+        
+        let second=arr.indexOf(4)
+        console.log("index of 4 is"+second)
+
+        let third=arr.find((data)=>{
+            return data>3
+        })
+        console.log("first value greater than 3 is :"+third)
+
+        let fourth=arr.includes((5))
+        console.log(fourth)
+        // excercise 9 end
+
+
+
+        })
+    </script>
+</body>
+</html>

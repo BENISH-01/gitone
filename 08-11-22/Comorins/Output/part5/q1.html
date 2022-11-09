@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+     <script>
+    $(document).ready(function(){
+            // excercise 1 start
+        let nums1=[0,1,2,3,4,5,6]
+        let nums2=[10,20,30,40]
+        concated=[...nums1,...nums2]
+        let nums3=concated
+        let greater=Math.max(...nums3)
+        let smaller=Math.min(...nums3)
+        console.log("concated array="+concated)
+        console.log("Greater value is="+greater)
+        console.log("Smaller value is="+smaller)
+        // excercise 1 end
+
+        // excercise 2 start
+        let fishermen=[
+            {
+                name:'fishermen1',
+                score:200
+            },
+            {
+                name:'fishermen2',
+                score:100
+            },
+            {
+                name:'fishermen3',
+                score:20
+            },
+            {
+                name:'fishermen5',
+                score:150
+            },
+            {
+                name:'fishermen6',
+                score:80
+            }
+        ]
+        let total=0;
+        
+        let score_total=fishermen.forEach((data)=>{
+            total+=data.score;
+        })
+        for(x in fishermen){
+           if(fishermen[x].score>100){
+            high_score=fishermen[x].name
+            console.log("name:"+high_score)
+           }
+           
+        }
+        average_score=total/fishermen.length
+       console.log("Total score="+total)
+       console.log("Average score="+average_score)
+    //    exercise 2 end
+
+    // excercise 3 start
+        var num_check= /\d+/g;
+        var string = "you can enter maximum 500 choices and print 200 of them";
+        var matches = string.match(num_check);  
+
+        console.log(`Numbers in the given string =${matches}`)
+        // excercise 3 end
+
+        // excercise 4 start
+        let all_scores=[-10,100,-50,'hello',67,'hi']
+        let check_positive=all_scores.map((data)=>{
+            if(data<0){
+                console.log(`${data} is a negative number`)
+            }
+
+        })
+         let check_type=()=>{
+            for(let x of all_scores){
+                if(typeof(x)!='number'){
+                    console.log(`${x} is not a number`)
+                }
+            }
+         }
+         check_type(all_scores)
+        //  excercise 4 end
+
+        // excercise 5 start
+        check_value=(a,b)=>{
+           (a>0 && b>0)? console.log('Both values are positve') :(a>0 || b>0)? console.log("One value is positve") :(a<0 && b<0)? console.log('Both values are negative') : console.log("process finished")
+        }
+        check_value(2,3)
+        check_value(-2,3)
+        check_value(-2,-3)
+            
+        
+
+       
+
+
+    })
+        
+
+     </script>
+</body>
+</html>

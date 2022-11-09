@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+     <script>
+        $(document).ready(function(){
+        //   excercise 1 start
+        let duplicate = ['A', 'B', 'A', 'C', 'B',1,1,5,6,1,6];
+
+        let new_arr = duplicate.filter((x, index) => {
+                return duplicate.indexOf(x) === index;
+            });
+        console.log(new_arr);
+        // excercise 1 end
+
+        // excercise 2 start
+
+        // excercise 2 end
+
+        // excercise3 start
+        array_to_check=['hi',1,2,3,'hello']
+        let num_check=(data)=>{
+             let a=data.filter((value)=>{
+              return typeof value==="number"
+             })
+             console.log(a)
+        }
+        num_check(array_to_check)
+        
+
+
+        // excercise 4 start
+        let array_to_filter=[1,4,5,67,89,98]
+        let filt=array_to_filter.filter((data)=>{
+            return data<50
+        })
+        console.log("values less than 50:"+ filt)
+        // excercise 4 end
+
+
+
+        })
+     </script>
+</body>
+</html>
