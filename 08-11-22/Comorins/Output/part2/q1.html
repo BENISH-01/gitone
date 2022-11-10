@@ -32,11 +32,12 @@
 
             }
             static show=()=>{
-                return new Book('Harry Potter',1990)
+                // return new Book('Harry Potter',1990)
+                console.log(this.title)
             }
             
         }
-         console.log(Book.show())
+         Book.show("Harry potter",22)
         //  excercise-2 end
 
         // excercise-3 start
@@ -64,10 +65,7 @@
     let filterd_arr=arr.filter((data)=>{
      return data<50
     })
-  
-    
-    
-    for(let i=0; i<arr.length; i++){
+   for(let i=0; i<arr.length; i++){
         for(let j=0; j<filterd_arr.length; j++){
             if(arr[i]==filterd_arr[j]){
                arr.splice(i,1)

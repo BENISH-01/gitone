@@ -106,7 +106,7 @@
 
         // excercise 11 start
         let x = -1; 
-        let add=()=>{ return x = x + 1; }
+        let add=()=> x = x + 1; 
         console.log(add())
         console.log(add())
         console.log(add())
@@ -114,9 +114,19 @@
         // excercise 11 end
 
         // excercise 12 start
-       
-
         
+        function changeobject(data) {
+            const object = {}
+            for(const [key, value] of data){
+                object[key] = value;
+            }
+            return object;
+        }
+        let urlParams = new URLSearchParams('https://www.google.com/search?name=Benish&age=22&browser=chrome.0.69i59j35i39i395j0i67i395l2j0i67i131i395i433l3j69i60.943j1j7&sourceid=chrome&ie=UTF-8')
+        let entries = urlParams.entries();
+        let params = changeobject(entries)
+        console.log(params)
+        // excercise 12 end
 
    })
 
